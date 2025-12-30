@@ -171,7 +171,7 @@ export default function Home() {
             </div>
 
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-              <span className="block text-white">Moses Onerhime</span>
+              <span className="block text-white">Moses Onerhimee</span>
               <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Developer & Creator
               </span>
