@@ -37,7 +37,7 @@ const projects: Project[] = [
     techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'Redux', 'Tailwind CSS'],
     category: 'dev',
     demoUrl: 'https://example.com/demo',
-    githubUrl: 'https://github.com/yourusername/ecommerce',
+    githubUrl: 'https://github.com/MosesOnerhime/ecommerce',
     whatILearned: [
       'Implementing secure authentication with JWT',
       'Managing complex state with Redux',
@@ -65,7 +65,7 @@ const projects: Project[] = [
     techStack: ['Next.js', 'TypeScript', 'Firebase', 'Tailwind CSS', 'Chart.js'],
     category: 'dev',
     demoUrl: 'https://example.com/tasks',
-    githubUrl: 'https://github.com/yourusername/tasks',
+    githubUrl: 'https://github.com/MosesOnerhime/tasks',
     whatILearned: [
       'Real-time features with Firebase',
       'Building drag-and-drop interfaces',
@@ -93,7 +93,7 @@ const projects: Project[] = [
     techStack: ['React', 'OpenWeather API', 'Chart.js', 'CSS Modules'],
     category: 'dev',
     demoUrl: 'https://example.com/weather',
-    githubUrl: 'https://github.com/yourusername/weather',
+    githubUrl: 'https://github.com/MosesOnerhime/weather',
     whatILearned: [
       'Working with weather APIs',
       'Data visualization with Chart.js',
@@ -388,16 +388,16 @@ export default function Home() {
 
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-12">
               <a 
-                href="mailto:moses@example.com?subject=Project Inquiry&body=Hi Moses, I'd like to discuss a project with you."
+                href="mailto:mosesonerhime11@gmail.com?subject=Project Inquiry&body=Hi Moses, I'd like to discuss a project with you."
                 className="group p-6 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-blue-500 transition-all text-left"
               >
                 <Mail className="text-blue-400 mb-3" size={24} />
                 <div className="font-semibold mb-1">Email</div>
-                <div className="text-sm text-zinc-400 group-hover:text-zinc-300">moses@example.com</div>
+                <div className="text-sm text-zinc-400 group-hover:text-zinc-300">mosesonerhime11@gmail.com</div>
               </a>
 
               <a 
-                href="https://wa.me/234XXXXXXXXXX?text=Hi%20Moses%2C%20I%27d%20like%20to%20discuss%20a%20project"
+                href="https://wa.me/2348142962222?text=Hi%20Moses%2C%20I%27d%20like%20to%20discuss%20a%20project"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group p-6 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-green-500 transition-all text-left"
@@ -409,7 +409,7 @@ export default function Home() {
             </div>
 
             <div className="flex justify-center gap-4">
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-zinc-900 border border-zinc-800 rounded-full flex items-center justify-center hover:border-zinc-700 transition-all" aria-label="GitHub">
+              <a href="https://github.com/MosesOnerhime" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-zinc-900 border border-zinc-800 rounded-full flex items-center justify-center hover:border-zinc-700 transition-all" aria-label="GitHub">
                 <Github size={20} />
               </a>
               <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-zinc-900 border border-zinc-800 rounded-full flex items-center justify-center hover:border-zinc-700 transition-all" aria-label="LinkedIn">
