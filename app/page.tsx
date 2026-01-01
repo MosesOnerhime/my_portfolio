@@ -36,7 +36,7 @@ const projects: Project[] = [
     ],
     techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'Redux', 'Tailwind CSS'],
     category: 'dev',
-    demoUrl: 'https://example.com/demo',
+    demoUrl: 'https://1.com/demo',
     githubUrl: 'https://github.com/MosesOnerhime/ecommerce',
     whatILearned: [
       'Implementing secure authentication with JWT',
@@ -64,7 +64,7 @@ const projects: Project[] = [
     ],
     techStack: ['Next.js', 'TypeScript', 'Firebase', 'Tailwind CSS', 'Chart.js'],
     category: 'dev',
-    demoUrl: 'https://example.com/tasks',
+    demoUrl: 'https://2.com/tasks',
     githubUrl: 'https://github.com/MosesOnerhime/tasks',
     whatILearned: [
       'Real-time features with Firebase',
@@ -92,7 +92,7 @@ const projects: Project[] = [
     ],
     techStack: ['React', 'OpenWeather API', 'Chart.js', 'CSS Modules'],
     category: 'dev',
-    demoUrl: 'https://example.com/weather',
+    demoUrl: 'https://3.com/weather',
     githubUrl: 'https://github.com/MosesOnerhime/weather',
     whatILearned: [
       'Working with weather APIs',

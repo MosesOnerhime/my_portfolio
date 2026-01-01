@@ -5,12 +5,12 @@ Modern, responsive portfolio website built with Next.js, TypeScript, and Tailwin
 ## 🎓 Student Information
 
 **Name:** `MOSES ONERHIME`  
-**Matric Number:** `22123043`
+**Matric Number:** `22120613043`
 
 ## 🌐 Live Demo
 
-**Live URL:** `https://your-portfolio.vercel.app`  
-**GitHub:** `https://github.com/yourusername/portfolio`
+**Live URL:** `https://moses-onerhime-portfolio.vercel.app/`  
+**GitHub:** `https://github.com/MosesOnerhime/my_portfolio.git`
 
 ## 🚀 Getting Started
 ```bash
