@@ -535,7 +535,7 @@ export default function Home() {
               <a href="https://github.com/MosesOnerhime" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-zinc-900 border border-zinc-800 rounded-full flex items-center justify-center hover:border-zinc-700 hover:scale-110 transition-all" aria-label="GitHub">
                 <Github size={20} />
               </a>
-              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-zinc-900 border border-zinc-800 rounded-full flex items-center justify-center hover:border-zinc-700 hover:scale-110 transition-all" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/moses-onerhime-1438ba301/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-zinc-900 border border-zinc-800 rounded-full flex items-center justify-center hover:border-zinc-700 hover:scale-110 transition-all" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
               <a href="https://www.tiktok.com/@furreal.aex" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-zinc-900 border border-zinc-800 rounded-full flex items-center justify-center hover:border-purple-700 hover:scale-110 transition-all" aria-label="TikTok">
