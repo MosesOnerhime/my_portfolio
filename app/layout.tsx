@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Moses Onerhime - Portfolio',
-  description: 'Full-stack developer portfolio showcasing web development projects',
+  description: 'My portfolio showcasing my projects',
   keywords: ['web developer', 'portfolio', 'React', 'Next.js', 'TypeScript'],
 };
 

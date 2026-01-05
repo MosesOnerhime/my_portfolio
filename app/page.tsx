@@ -456,6 +456,7 @@ export default function Home() {
                     ],
                     techStack: ['Premiere Pro', 'After Effects', 'DaVinci Resolve', 'Photoshop'],
                     category: 'video',
+                    demoUrl: 'https://www.tiktok.com/@furreal.aex',
                     whatILearned: [
                       'Advanced color grading techniques',
                       'Motion graphics and animation',
