@@ -656,7 +656,7 @@ export default function Home() {
                   <div className="flex flex-wrap gap-4">
                     {selectedProject.demoUrl && (
                       <a href={selectedProject.demoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full hover:bg-zinc-100 transition-all font-semibold">
-                        <ExternalLink size={18} /> Live Demo
+                        <ExternalLink size={18} /> View Tiktok
                       </a>
                     )}
                     {selectedProject.githubUrl && (
