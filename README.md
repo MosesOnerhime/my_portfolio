@@ -1,6 +1,6 @@
 # Portfolio Website
 
-Modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.
+Modern, responsive portfolio website for Moses Onerhime, a full-stack developer, game developer, and creative director. Built with Next.js, TypeScript, and Tailwind CSS.
 
 ## 🎓 Student Information
 
@@ -56,18 +56,16 @@ app/
 
 - ✅ Responsive design (mobile/tablet/desktop)
 - ✅ About Me section
-- ✅ 3+ Projects with details
+- ✅ Eight development, product, and creative projects
+- ✅ Live work for Furreal Productions, GLAMOURSPHAIR, and CalVision
 - ✅ Project filtering by technology
 - ✅ Contact CTAs (Email + WhatsApp)
-- ✅ Accessible (ARIA, keyboard navigation)
+- ✅ Accessible project dialogs, filtering, and keyboard navigation
 - ✅ SEO optimized
 
 ## 📝 Customization
 
-Edit `app/page.tsx`:
-- Update project data in `projects` array
-- Change personal info in Hero and About sections
-- Update contact links (email, WhatsApp, social media)
+Project content is maintained in `app/data/projects.ts`. Shared interactive UI lives in `app/components`, while the page structure is in `app/page.tsx`.
 
 ## 📄 License
 
