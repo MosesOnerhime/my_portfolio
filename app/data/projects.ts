@@ -172,7 +172,7 @@ export const projects: Project[] = [
       'Bring the Furreal identity into video and motion work',
     ],
     liveUrl: 'https://www.tiktok.com/@furreal.aex',
-    image: '/furreal.aex/profile picture.jpg',
+    image: '/furreal.aex/profile picture.png',
     imageAlt: 'Furreal.aex profile artwork showing a hooded figure',
     visual: 'editing',
     featured: true,
