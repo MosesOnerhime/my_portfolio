@@ -1,72 +1,43 @@
-# Portfolio Website
+# Moses Onerhime Portfolio
 
-Modern, responsive portfolio website for Moses Onerhime, a full-stack developer, game developer, and creative director. Built with Next.js, TypeScript, and Tailwind CSS.
+A responsive portfolio for Moses Onerhime, a software and website developer, game developer, AI and data engineer, video editor, and creative director. Built with Next.js, TypeScript, and Tailwind CSS.
 
-## 🎓 Student Information
+## Student information
 
-**Name:** `MOSES ONERHIME`  
-**Matric Number:** `22120613043`
+- Name: Moses Onerhime
+- Matric number: 22120613043
 
-## 🌐 Live Demo
+## Links
 
-**Live URL:** `https://moses-onerhime-portfolio.vercel.app/`  
-**GitHub:** `https://github.com/MosesOnerhime/my_portfolio.git`
+- Portfolio: https://moses-onerhime-portfolio.vercel.app/
+- Repository: https://github.com/MosesOnerhime/my_portfolio
 
-## 🚀 Getting Started
+## Getting started
+
 ```bash
-# Install dependencies
 npm install
-
-# Run development server
 npm run dev
+```
 
-# Build for production
+Open http://localhost:3000.
+
+## Quality checks
+
+```bash
+npm run lint
+npx tsc --noEmit
 npm run build
-
-# Start production server
-npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000)
+## Structure
 
-## 📦 Technologies
+- `app/data/projects.ts` is the source of truth for project content, status, links, and ordering.
+- `app/components` contains shared interface components.
+- `app/work/[slug]` provides crawlable project case studies with unique metadata.
+- `app/globals.css` contains the site design system and responsive styles.
 
-- Next.js 15
-- TypeScript
-- Tailwind CSS
-- Lucide React (icons)
+The portfolio includes accessible project filters, eight project case studies, responsive layouts, reduced-motion support, social metadata, a sitemap, robots rules, and direct contact options.
 
-## 📁 Project Structure
-```
-app/
-├─ globals.css    # Global styles
-├─ layout.tsx     # Root layout
-└─ page.tsx       # Main portfolio page (all-in-one)
-```
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-
-1. Push code to GitHub
-2. Import repo on [vercel.com](https://vercel.com)
-3. Deploy automatically
-
-## ✅ Features
-
-- ✅ Responsive design (mobile/tablet/desktop)
-- ✅ About Me section
-- ✅ Eight development, product, and creative projects
-- ✅ Live work for Drixil Group, GLAMOURSPHAIR, and CalVision
-- ✅ Project filtering by technology
-- ✅ Contact CTAs (Email + WhatsApp)
-- ✅ Accessible project dialogs, filtering, and keyboard navigation
-- ✅ SEO optimized
-
-## 📝 Customization
-
-Project content is maintained in `app/data/projects.ts`. Shared interactive UI lives in `app/components`, while the page structure is in `app/page.tsx`.
-
-## 📄 License
+## License
 
 MIT

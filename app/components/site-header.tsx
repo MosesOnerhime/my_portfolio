@@ -1,35 +1,46 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const links = [
-  { href: '#work', label: 'Work' },
-  { href: '#about', label: 'About' },
-  { href: '#capabilities', label: 'Capabilities' },
+  { href: '/#work', label: 'Work' },
+  { href: '/#about', label: 'About' },
+  { href: '/#capabilities', label: 'Capabilities' },
 ];
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileNavRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setOpen(false);
+      if (event.key === 'Escape' && open) {
+        setOpen(false);
+        menuButtonRef.current?.focus();
+      }
     };
     window.addEventListener('keydown', closeOnEscape);
     return () => window.removeEventListener('keydown', closeOnEscape);
-  }, []);
+  }, [open]);
+
+  useEffect(() => {
+    if (open) mobileNavRef.current?.querySelector<HTMLAnchorElement>('a')?.focus();
+  }, [open]);
 
   return (
     <header className="site-header">
-      <a className="brand-mark" href="#top" aria-label="Runo.dev, back to top">
+      <Link className="brand-mark" href="/" aria-label="Runo.dev, the portfolio of Moses Onerhime, home">
         <span>Runo</span><span className="brand-dot" aria-hidden="true" /><span>dev</span>
-      </a>
+      </Link>
       <nav className="desktop-nav" aria-label="Main navigation">
-        {links.map((link) => <a key={link.href} href={link.href}>{link.label}</a>)}
+        {links.map((link) => <Link key={link.href} href={link.href}>{link.label}</Link>)}
       </nav>
-      <a className="header-cta" href="#contact">Let&apos;s talk</a>
+      <Link className="header-cta" href="/#contact">Let&apos;s talk</Link>
       <button
+        ref={menuButtonRef}
         className="menu-button"
         type="button"
         aria-expanded={open}
@@ -40,9 +51,9 @@ export function SiteHeader() {
         {open ? <X size={21} /> : <Menu size={21} />}
       </button>
       {open && (
-        <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">
-          {links.map((link) => <a key={link.href} href={link.href} onClick={() => setOpen(false)}>{link.label}</a>)}
-          <a href="#contact" onClick={() => setOpen(false)}>Let&apos;s work together</a>
+        <nav ref={mobileNavRef} id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">
+          {links.map((link) => <Link key={link.href} href={link.href} onClick={() => setOpen(false)}>{link.label}</Link>)}
+          <Link href="/#contact" onClick={() => setOpen(false)}>Let&apos;s work together</Link>
         </nav>
       )}
     </header>

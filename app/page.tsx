@@ -2,55 +2,70 @@ import Image from 'next/image';
 import {
   ArrowDownRight,
   ArrowUpRight,
+  BrainCircuit,
+  Clapperboard,
   Code2,
-  Github,
   Gamepad2,
-  Instagram,
-  Layers3,
-  Linkedin,
-  Mail,
-  MessageCircle,
-  MessageSquare,
-  Music2,
-  Play,
-  Send,
-  Youtube,
+  Globe2,
+  Workflow,
 } from 'lucide-react';
+import { ContactSection } from './components/contact-section';
 import { ProjectShowcase } from './components/project-showcase';
+import { SiteFooter } from './components/site-footer';
 import { SiteHeader } from './components/site-header';
+import { liveProjects, projects } from './data/projects';
+import { siteConfig } from './data/site';
 
 const capabilities = [
   {
     icon: Code2,
     number: '01',
-    title: 'Product development',
-    copy: 'Responsive web and mobile products built around real user journeys, reliable frontends, and clear interfaces.',
-    skills: 'React · Next.js · TypeScript · Node.js',
+    title: 'Software development',
+    copy: 'I build practical web, mobile, frontend, and backend software around clear user needs and reliable workflows.',
+    skills: 'Frontend, backend, mobile, software architecture',
   },
   {
-    icon: Layers3,
+    icon: Globe2,
     number: '02',
-    title: 'Experience design',
-    copy: 'Visual systems that give products a distinct point of view without sacrificing usability or performance.',
-    skills: 'UI/UX · Prototyping · Design systems',
-  },
-  {
-    icon: Play,
-    number: '03',
-    title: 'Creative direction',
-    copy: 'Brand worlds, motion, edits, and launch visuals that turn an idea into something people can feel.',
-    skills: 'Premiere Pro · After Effects · Branding',
+    title: 'Website development',
+    copy: 'I design and build responsive websites with clear structure, strong visual identity, and thoughtful user experiences.',
+    skills: 'React, Next.js, TypeScript, Node.js',
   },
   {
     icon: Gamepad2,
-    number: '04',
+    number: '03',
     title: 'Game development',
-    copy: 'Interactive worlds, gameplay systems, and original ideas made for players to enjoy together.',
-    skills: 'Roblox · Luau · Game systems · World building',
+    copy: 'I code game mechanics and work across animation, 3D modelling, sound effects, and UI/UX to shape complete game experiences.',
+    skills: 'Game mechanics, animation, 3D modelling, SFX, UI/UX',
+  },
+  {
+    icon: BrainCircuit,
+    number: '04',
+    title: 'AI and data engineering',
+    copy: 'I use machine and deep learning to understand how AI systems work and build models for specific problems.',
+    skills: 'Machine learning, deep learning, model development, data',
+  },
+  {
+    icon: Clapperboard,
+    number: '05',
+    title: 'Video editing',
+    copy: 'I turn raw footage into focused visual stories through pacing, colour, motion graphics, transitions, and sound.',
+    skills: 'Premiere Pro, After Effects, DaVinci Resolve, sound design',
+  },
+  {
+    icon: Workflow,
+    number: '06',
+    title: 'DevOps, currently learning',
+    copy: 'I am learning the foundations of deployment, automation, and infrastructure so I can support products beyond development.',
+    skills: 'Currently learning delivery workflows and infrastructure fundamentals',
   },
 ];
 
 export default function Home() {
+  const selectedWorkCount = String(projects.length).padStart(2, '0');
+  const liveLaunchCount = String(liveProjects.length).padStart(2, '0');
+  const disciplineCount = String(capabilities.length).padStart(2, '0');
+
   return (
     <div id="top" className="site-shell">
       <a href="#main" className="skip-link">Skip to main content</a>
@@ -59,19 +74,19 @@ export default function Home() {
       <main id="main">
         <section className="hero section-pad" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow"><span className="status-dot" /> Available for select projects</p>
+            <p className="eyebrow"><span className="status-dot" /> {siteConfig.availability}</p>
             <h1 id="hero-title">Moses<span>Onerhime.</span></h1>
             <p className="hero-intro">
-              I am a full-stack developer, game developer, and creative director. I build useful products, interactive experiences, and visual stories.
+              I am into game developement, AI and data engineering, software and website developement, and video editing. I build practical products, interactive experiences, intelligent systems, and visual stories.
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#work">Explore my work <ArrowDownRight size={18} /></a>
-              <a className="button button-secondary" href="mailto:mosesonerhime11@gmail.com">Email me <ArrowUpRight size={18} /></a>
+              <a className="button button-primary" href="#work">Explore my work <ArrowDownRight size={18} aria-hidden="true" /></a>
+              <a className="button button-secondary" href={`mailto:${siteConfig.email}`}>Email me <ArrowUpRight size={18} aria-hidden="true" /></a>
             </div>
             <dl className="hero-stats">
-              <div><dt>08</dt><dd>Selected works</dd></div>
-              <div><dt>03</dt><dd>Live launches</dd></div>
-              <div><dt>04</dt><dd>Main disciplines</dd></div>
+              <div><dt>{selectedWorkCount}</dt><dd>Selected works</dd></div>
+              <div><dt>{liveLaunchCount}</dt><dd>Live launches</dd></div>
+              <div><dt>{disciplineCount}</dt><dd>Main disciplines</dd></div>
             </dl>
           </div>
 
@@ -90,7 +105,7 @@ export default function Home() {
         <section id="work" className="work-section section-pad" aria-labelledby="work-title">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">Selected work · 2024 to 2026</p>
+              <p className="eyebrow">Selected work across code and creativity</p>
               <h2 id="work-title">A few projects<br />I am proud of.</h2>
             </div>
             <p>This collection includes websites, AI tools, games, mobile apps, and creative work that I have built so far.</p>
@@ -104,66 +119,38 @@ export default function Home() {
             <span className="about-number" aria-hidden="true">MO</span>
           </div>
           <div className="about-copy">
-            <h2 id="about-title">I build websites, apps, games, and creative work.</h2>
+            <h2 id="about-title">I build software, websites, games, AI systems, and visual stories.</h2>
             <div className="about-columns">
-              <p>I am a full-stack and game developer based in Nigeria. I like taking an idea from its first sketch to a finished product that people can actually use and enjoy.</p>
-              <p>I also create under <strong>Drixil</strong>, where I work on games, original ideas, motion, and media. Working across code and storytelling helps me bring a different perspective to every project.</p>
+              <p>I am a software, website, and game developer based in Nigeria. I also work in AI and data engineering, using machine and deep learning to build models for specific problems.</p>
+              <p>I create under <strong>Drixil</strong> and edit video as Furreal.aex. Working across code, game art, sound, interface design, data, and storytelling helps me bring a different perspective to every project.</p>
             </div>
             <div className="about-links">
-              <a href="https://github.com/MosesOnerhime" target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={16} /></a>
-              <a href="https://www.linkedin.com/in/moses-onerhime-1438ba301/" target="_blank" rel="noopener noreferrer">LinkedIn <ArrowUpRight size={16} /></a>
-              <a href="https://drixil-group.vercel.app/" target="_blank" rel="noopener noreferrer">Drixil Group <ArrowUpRight size={16} /></a>
-              <a href="https://www.tiktok.com/@furreal.aex" target="_blank" rel="noopener noreferrer">Furreal.aex <ArrowUpRight size={16} /></a>
+              <a href={siteConfig.socials.github} target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={16} aria-hidden="true" /></a>
+              <a href={siteConfig.socials.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn <ArrowUpRight size={16} aria-hidden="true" /></a>
+              <a href="https://drixil-group.vercel.app/" target="_blank" rel="noopener noreferrer">Drixil Group <ArrowUpRight size={16} aria-hidden="true" /></a>
+              <a href={siteConfig.socials.tiktok} target="_blank" rel="noopener noreferrer">Furreal.aex <ArrowUpRight size={16} aria-hidden="true" /></a>
             </div>
           </div>
         </section>
 
         <section id="capabilities" className="capabilities-section section-pad" aria-labelledby="capabilities-title">
           <div className="section-heading compact">
-              <div><p className="eyebrow">What I do</p><h2 id="capabilities-title">What I enjoy<br />working on.</h2></div>
+            <div><p className="eyebrow">What I do</p><h2 id="capabilities-title">What I enjoy<br />working on.</h2></div>
           </div>
           <div className="capability-grid">
             {capabilities.map(({ icon: Icon, number, title, copy, skills }) => (
               <article className="capability-card" key={number}>
-                <div className="capability-top"><span>{number}</span><Icon size={24} /></div>
+                <div className="capability-top"><span>{number}</span><Icon size={24} aria-hidden="true" /></div>
                 <h3>{title}</h3><p>{copy}</p><small>{skills}</small>
               </article>
             ))}
           </div>
         </section>
 
-        <section id="contact" className="contact-section section-pad" aria-labelledby="contact-title">
-          <p className="eyebrow">Have something in mind?</p>
-          <h2 id="contact-title">Let&apos;s work together.</h2>
-          <p className="contact-copy">If you have a project in mind or simply want to say hello, send me a message. I would be happy to hear from you.</p>
-          <div className="contact-actions">
-            <a className="button button-light" href="mailto:mosesonerhime11@gmail.com?subject=Project%20inquiry">Start a conversation <Mail size={18} /></a>
-            <a className="button button-outline-light" href="https://wa.me/2348142962222?text=Hi%20Moses%2C%20I%27d%20like%20to%20discuss%20a%20project" target="_blank" rel="noopener noreferrer">WhatsApp <MessageCircle size={18} /></a>
-          </div>
-          <div className="contact-details" aria-label="More ways to contact me">
-            <span><MessageSquare size={16} /> Discord: furreal.aep</span>
-            <a href="https://t.me/mo_real26" target="_blank" rel="noopener noreferrer"><Send size={16} /> Telegram: @mo_real26</a>
-            <span><MessageCircle size={16} /> WhatsApp: 08142962222</span>
-          </div>
-        </section>
+        <ContactSection />
       </main>
 
-      <footer className="site-footer section-pad">
-        <div>
-          <a className="brand-mark footer-brand" href="#top" aria-label="Runo.dev, back to top"><span>Runo</span><span className="brand-dot" aria-hidden="true" /><span>dev</span></a>
-          <p>Full-stack developer, game developer, and creative director.</p>
-        </div>
-        <div className="social-links" aria-label="Social profiles">
-          <a href="https://www.tiktok.com/@furreal.aex" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><Music2 size={19} /></a>
-          <a href="https://github.com/MosesOnerhime" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Github size={19} /></a>
-          <a href="https://www.linkedin.com/in/moses-onerhime-1438ba301/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={19} /></a>
-          <a href="https://www.instagram.com/furreal.aep" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={19} /></a>
-          <a href="https://www.youtube.com/@furrealproductions" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><Youtube size={19} /></a>
-          <a href="https://wa.me/2348142962222" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><MessageCircle size={19} /></a>
-          <a href="https://t.me/mo_real26" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><Send size={19} /></a>
-        </div>
-        <p className="footer-meta">© {new Date().getFullYear()} Moses Onerhime · Built with intent.</p>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
