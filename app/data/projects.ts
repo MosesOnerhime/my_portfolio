@@ -15,17 +15,17 @@ export interface Project {
   codeUrl?: string;
   image?: string;
   imageAlt?: string;
-  visual: 'furreal' | 'glamour' | 'calvision' | 'beyond' | 'learning' | 'trading' | 'dental' | 'editing';
+  visual: 'drixil' | 'glamour' | 'calvision' | 'beyond' | 'learning' | 'trading' | 'dental' | 'editing';
   featured?: boolean;
 }
 
 export const projects: Project[] = [
   {
-    slug: 'furreal-productions',
-    title: 'Furreal Productions',
+    slug: 'drixil-group',
+    title: 'Drixil Group',
     label: 'Creative technology company',
     summary: 'The digital home of a creative technology company building games, original ideas, software, and media brands.',
-    description: 'I designed and built the public website for Furreal Productions. It introduces the company, explains what each division does, and gives future products a clear place to grow.',
+    description: 'I designed and built the public website for Drixil Group. It introduces the company, explains what each division does, and gives future products a clear place to grow.',
     role: 'Founder, designer, and developer',
     year: '2026',
     category: 'web',
@@ -33,12 +33,12 @@ export const projects: Project[] = [
     highlights: [
       'Turned a growing company story into a focused website',
       'Created a visual system that can grow with new divisions and products',
-      'Connected Furreal Productions with Furreal Interactive and Beyond 90',
+      'Connected Drixil Group with Drixil Interactive and Beyond 90',
     ],
-    liveUrl: 'https://furreal-productions.vercel.app/',
-    image: '/furreal productions/logo_03.jpeg',
-    imageAlt: 'Furreal Productions logo on a black background',
-    visual: 'furreal',
+    liveUrl: 'https://drixil-group.vercel.app/',
+    image: '/drixil/logo-silver-purple.png',
+    imageAlt: 'Drixil Group silver and purple logo',
+    visual: 'drixil',
     featured: true,
   },
   {
@@ -85,8 +85,8 @@ export const projects: Project[] = [
     slug: 'beyond-90',
     title: 'Beyond 90',
     label: 'Game and original IP',
-    summary: 'A team football game in development for Roblox under Furreal Interactive.',
-    description: 'Beyond 90 is the first active game from Furreal Interactive. I am developing the game and building its identity around competitive football that is more exciting when played with a team.',
+    summary: 'A team football game in development for Roblox under Drixil Interactive.',
+    description: 'Beyond 90 is the first active game from Drixil Interactive. I am developing the game and building its identity around competitive football that is more exciting when played with a team.',
     role: 'Game development and creative direction',
     year: 'In development',
     category: 'creative',
@@ -94,9 +94,9 @@ export const projects: Project[] = [
     highlights: [
       'Created the game identity and its visual direction',
       'Designed the match experience around team play and competition',
-      'Connected the game to the wider Furreal Interactive brand',
+      'Connected the game to the wider Drixil Interactive brand',
     ],
-    liveUrl: 'https://furreal-productions.vercel.app/interactive',
+    liveUrl: 'https://drixil-group.vercel.app/interactive',
     image: '/beyond 90/thumbnail 3.png',
     imageAlt: 'Beyond 90 football pitch shown through a broadcast camera view',
     visual: 'beyond',
@@ -169,7 +169,7 @@ export const projects: Project[] = [
     highlights: [
       'Create short-form edits designed for social platforms',
       'Handle colour, motion graphics, transitions, and sound',
-      'Bring the Furreal identity into video and motion work',
+      'Bring the Furreal.aex identity into video and motion work',
     ],
     liveUrl: 'https://www.tiktok.com/@furreal.aex',
     image: '/furreal.aex/profile picture.png',

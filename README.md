@@ -57,7 +57,7 @@ app/
 - ✅ Responsive design (mobile/tablet/desktop)
 - ✅ About Me section
 - ✅ Eight development, product, and creative projects
-- ✅ Live work for Furreal Productions, GLAMOURSPHAIR, and CalVision
+- ✅ Live work for Drixil Group, GLAMOURSPHAIR, and CalVision
 - ✅ Project filtering by technology
 - ✅ Contact CTAs (Email + WhatsApp)
 - ✅ Accessible project dialogs, filtering, and keyboard navigation

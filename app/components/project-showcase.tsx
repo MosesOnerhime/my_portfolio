@@ -12,7 +12,7 @@ const filters: Array<{ value: 'all' | ProjectCategory; label: string }> = [
   { value: 'creative', label: 'Creative' },
 ];
 
-const priorityOrder = ['furreal-productions', 'beyond-90', 'furreal-aex', 'glamoursphair', 'calvision'];
+const priorityOrder = ['drixil-group', 'beyond-90', 'furreal-aex', 'glamoursphair', 'calvision'];
 const orderedProjects = [...projects].sort((first, second) => {
   const firstIndex = priorityOrder.indexOf(first.slug);
   const secondIndex = priorityOrder.indexOf(second.slug);

@@ -75,13 +75,13 @@ export default function Home() {
             </dl>
           </div>
 
-          <div className="hero-art" aria-label="Selected work from Furreal Productions and Beyond 90">
+          <div className="hero-art" aria-label="Selected work from Drixil Group and Beyond 90">
             <div className="hero-orbit" aria-hidden="true" />
             <div className="hero-image-card hero-image-main">
               <Image src="/beyond 90/icon v1.0.png" alt="Beyond 90 game icon" fill priority sizes="(max-width: 850px) 88vw, 42vw" />
             </div>
             <div className="hero-image-card hero-image-logo">
-              <Image src="/furreal productions/logo_03.jpeg" alt="Furreal Productions logo" fill sizes="180px" />
+              <Image src="/drixil/logo-silver-purple.png" alt="Drixil Group logo" fill sizes="180px" />
             </div>
             <p className="hero-note">Code · Games · Design · Motion</p>
           </div>
@@ -107,12 +107,12 @@ export default function Home() {
             <h2 id="about-title">I build websites, apps, games, and creative work.</h2>
             <div className="about-columns">
               <p>I am a full-stack and game developer based in Nigeria. I like taking an idea from its first sketch to a finished product that people can actually use and enjoy.</p>
-              <p>I also create under <strong>Furreal</strong>, where I work on games, original ideas, motion, and media. Working across code and storytelling helps me bring a different perspective to every project.</p>
+              <p>I also create under <strong>Drixil</strong>, where I work on games, original ideas, motion, and media. Working across code and storytelling helps me bring a different perspective to every project.</p>
             </div>
             <div className="about-links">
               <a href="https://github.com/MosesOnerhime" target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={16} /></a>
               <a href="https://www.linkedin.com/in/moses-onerhime-1438ba301/" target="_blank" rel="noopener noreferrer">LinkedIn <ArrowUpRight size={16} /></a>
-              <a href="https://furreal-productions.vercel.app/" target="_blank" rel="noopener noreferrer">Furreal Productions <ArrowUpRight size={16} /></a>
+              <a href="https://drixil-group.vercel.app/" target="_blank" rel="noopener noreferrer">Drixil Group <ArrowUpRight size={16} /></a>
               <a href="https://www.tiktok.com/@furreal.aex" target="_blank" rel="noopener noreferrer">Furreal.aex <ArrowUpRight size={16} /></a>
             </div>
           </div>

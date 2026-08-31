@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   },
   twitter: { card: 'summary_large_image', title: 'Moses Onerhime | Developer and Creative Director', description: 'Selected web, game, product, and creative work.' },
   icons: {
-    icon: [{ url: '/furreal productions/logo_04.jpeg', type: 'image/jpeg' }],
-    apple: [{ url: '/furreal productions/logo_04.jpeg', type: 'image/jpeg' }],
+    icon: [{ url: '/favicon/image.png', type: 'image/png' }],
+    apple: [{ url: '/favicon/image.png', type: 'image/png' }],
   },
 };
 
