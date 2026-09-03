@@ -35,15 +35,15 @@ const capabilities = [
     icon: Gamepad2,
     number: '03',
     title: 'Game development',
-    copy: 'I code game mechanics and work across animation, 3D modelling, sound effects, and UI/UX to shape complete game experiences.',
-    skills: 'Game mechanics, animation, 3D modelling, SFX, UI/UX',
+    copy: 'I build game mechanics and gameplay systems, then shape the wider experience through animation, 3D modelling, sound effects, UI/UX, and creative direction.',
+    skills: 'Gameplay systems, animation, 3D modelling, SFX, UI/UX',
   },
   {
     icon: BrainCircuit,
     number: '04',
     title: 'AI and data engineering',
-    copy: 'I use machine and deep learning to understand how AI systems work and build models for specific problems.',
-    skills: 'Machine learning, deep learning, model development, data',
+    copy: 'I work with data, machine learning, and deep learning to understand AI systems, build models for specific problems, and connect them to useful products.',
+    skills: 'Data preparation, machine learning, deep learning, model integration',
   },
   {
     icon: Clapperboard,
@@ -77,7 +77,7 @@ export default function Home() {
             <p className="eyebrow"><span className="status-dot" /> {siteConfig.availability}</p>
             <h1 id="hero-title">Moses<span>Onerhime.</span></h1>
             <p className="hero-intro">
-              I am into game developement, AI and data engineering, software and website developement, and video editing. I build practical products, interactive experiences, intelligent systems, and visual stories.
+              I build software, websites, games, AI tools, and visual stories. My work brings development, data, design, and motion together.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">Explore my work <ArrowDownRight size={18} aria-hidden="true" /></a>
@@ -121,8 +121,12 @@ export default function Home() {
           <div className="about-copy">
             <h2 id="about-title">I build software, websites, games, AI systems, and visual stories.</h2>
             <div className="about-columns">
-              <p>I am a software, website, and game developer based in Nigeria. I also work in AI and data engineering, using machine and deep learning to build models for specific problems.</p>
-              <p>I create under <strong>Drixil</strong> and edit video as Furreal.aex. Working across code, game art, sound, interface design, data, and storytelling helps me bring a different perspective to every project.</p>
+              <p>I am a software, website, and game developer based in Nigeria. I also work in AI and data engineering, using machine and deep learning to build models for specific problems and useful products.</p>
+              <p>I create under <strong>Drixil</strong> and edit video as Furreal.aex. Working across code, gameplay, animation, sound, interface design, data, and storytelling helps me bring a different perspective to every project.</p>
+            </div>
+            <div className="about-vision">
+              <p className="eyebrow">A direction I care about</p>
+              <p>I want to use games and interactive experiences to express, preserve, and teach African culture and history. <em>Ghost of Tsushima</em> inspires me because culture shapes its environments, stories, music, clothing, architecture, language, and player experience. I want to bring that kind of cultural grounding to African stories.</p>
             </div>
             <div className="about-links">
               <a href={siteConfig.socials.github} target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={16} aria-hidden="true" /></a>
@@ -145,6 +149,67 @@ export default function Home() {
               </article>
             ))}
           </div>
+
+          <section className="current-work-list" aria-label="Projects currently in development">
+            <article id="current-ai-work" className="current-work-feature" aria-labelledby="current-ai-work-title">
+              <div className="current-work-heading">
+                <div className="current-work-meta">
+                  <p className="eyebrow">Current AI work</p>
+                  <span>In development</span>
+                </div>
+                <h3 id="current-ai-work-title">An AI coding harness for building complete applications.</h3>
+                <p>
+                  I am currently working with Approovia Limited on an AI coding harness in the same broad category as Lovable and Cursor. It is being designed to turn a simple prompt into a tested, deployed application through a guided conversation about the product&apos;s requirements.
+                </p>
+              </div>
+
+              <div className="current-work-details">
+                <p>
+                  For example, a hospital could ask it to create a hospital management system. The harness would ask which features and specifications are needed. If the user chooses to skip that process, it could instead work from information found in the hospital&apos;s website or documents.
+                </p>
+                <p>
+                  From that information, the harness would define the business logic and specifications, then direct a coding agent to build the application. A structured set of Markdown files would guide the agent through consistent development practices, security considerations, and testing.
+                </p>
+                <ol className="current-work-flow" aria-label="Planned AI coding harness workflow">
+                  <li><span>01</span><strong>Understand</strong><small>Start with a prompt, questions, or existing documents.</small></li>
+                  <li><span>02</span><strong>Specify</strong><small>Turn the requirements into business logic and application specifications.</small></li>
+                  <li><span>03</span><strong>Build and test</strong><small>Guide a coding agent with standardized Markdown processes.</small></li>
+                  <li><span>04</span><strong>Deploy</strong><small>Release through Approovia&apos;s cloud service after testing.</small></li>
+                </ol>
+                <p className="current-work-note">
+                  The cloud service is being developed from scratch on rented data-centre infrastructure. The harness will begin as a web application, with desktop and mobile versions planned for later.
+                </p>
+              </div>
+            </article>
+
+            <article id="current-safety-work" className="current-work-feature" aria-labelledby="current-safety-work-title">
+              <div className="current-work-heading">
+                <div className="current-work-meta">
+                  <p className="eyebrow">Personal safety system</p>
+                  <span>Concept in development</span>
+                </div>
+                <h3 id="current-safety-work-title">Connecting software, machine learning, and a discreet wearable.</h3>
+                <p>
+                  I am working on a software and hardware concept intended to support people in dangerous situations. The software would explore machine learning signals that could indicate potential harm in an environment, while a wearable such as a ring, necklace, or bracelet would give someone a manual way to trigger an alert.
+                </p>
+              </div>
+
+              <div className="current-work-details">
+                <p>
+                  The planned alert flow would notify selected emergency contacts or emergency services and share the person&apos;s location. The tracker is intended to help locate someone during an emergency, including a kidnapping. These are planned capabilities, not a claim that the system is currently operational or a replacement for emergency services.
+                </p>
+                <ol className="current-work-flow" aria-label="Planned personal safety system workflow">
+                  <li><span>01</span><strong>Monitor</strong><small>Explore environmental signals that may point to potential danger.</small></li>
+                  <li><span>02</span><strong>Trigger</strong><small>Provide a discreet manual alert through a connected wearable.</small></li>
+                  <li><span>03</span><strong>Notify</strong><small>Contact selected people or services when an alert is raised.</small></li>
+                  <li><span>04</span><strong>Locate</strong><small>Share tracking information to support an emergency response.</small></li>
+                </ol>
+                <p className="current-work-note">
+                  The final wearable form and operating model are still being explored. I am presenting this as work in development, not as an operational safety service.
+                </p>
+              </div>
+            </article>
+          </section>
         </section>
 
         <ContactSection />

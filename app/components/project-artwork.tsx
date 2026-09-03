@@ -10,6 +10,26 @@ export function ProjectArtwork({
   priority?: boolean;
   sizes?: string;
 }) {
+  if (project.gallery?.length) {
+    return (
+      <div className="project-gallery" role="group" aria-label={`${project.title} published work across social platforms`}>
+        {project.gallery.map((item, index) => (
+          <figure className="project-gallery-item" key={item.src}>
+            <Image
+              src={item.src}
+              alt={item.alt}
+              fill
+              priority={priority && index === 0}
+              sizes={index === 0 ? sizes : '(max-width: 760px) 50vw, (max-width: 1100px) 35vw, 26vw'}
+              className="project-image project-gallery-image"
+            />
+            <figcaption>{item.label}</figcaption>
+          </figure>
+        ))}
+      </div>
+    );
+  }
+
   if (project.image) {
     return (
       <Image

@@ -1,6 +1,6 @@
 # Moses Onerhime Portfolio
 
-A responsive portfolio for Moses Onerhime, a software and website developer, game developer, AI and data engineer, video editor, and creative director. Built with Next.js, TypeScript, and Tailwind CSS.
+A responsive portfolio for Moses Onerhime, featuring software, websites, game development, AI and data projects, and video editing work. Built with Next.js, TypeScript, and Tailwind CSS.
 
 ## Student information
 

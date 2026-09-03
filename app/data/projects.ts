@@ -1,6 +1,12 @@
 export type ProjectCategory = 'web' | 'product' | 'creative';
 export type ProjectStatus = 'live' | 'in-development' | 'ongoing' | 'internship' | 'project';
 
+export interface ProjectImage {
+  src: string;
+  alt: string;
+  label: string;
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -20,6 +26,7 @@ export interface Project {
   codeUrl?: string;
   image?: string;
   imageAlt?: string;
+  gallery?: ProjectImage[];
   visual: 'drixil' | 'glamour' | 'calvision' | 'beyond' | 'learning' | 'trading' | 'dental' | 'editing';
   featured?: boolean;
 }
@@ -55,18 +62,18 @@ export const projects: Project[] = [
     slug: 'beyond-90',
     title: 'Beyond 90',
     label: 'Game and original IP',
-    summary: 'A team football game in development for Roblox under Drixil Interactive.',
-    description: 'Beyond 90 is the first active game from Drixil Interactive. I am developing the game and building its identity around competitive football that is more exciting when played with a team.',
-    role: 'Game development and creative direction',
+    summary: 'A Roblox football game in development, built around broadcast-style presentation and fluid, responsive play.',
+    description: 'Beyond 90 is the first active game from Drixil Interactive. I am developing its football systems and creative direction, with a broadcast camera intended to make each match feel like a televised game. Fluid controls and responsive mechanics are central to the experience I am building.',
+    role: 'Game developer and creative director',
     status: 'in-development',
     statusLabel: 'In development',
     statusNote: 'Beyond 90 is currently in development. Its Drixil Interactive page places the game within the wider studio.',
     category: 'creative',
-    tags: ['Roblox', 'Game design', 'Creative direction', 'Original IP'],
+    tags: ['Roblox', 'Gameplay systems', 'Broadcast camera', 'Creative direction'],
     highlights: [
+      'Designed the broadcast-camera presentation around the feel of a televised match',
+      'Developing fluid, responsive football mechanics for Roblox',
       'Created the game identity and its visual direction',
-      'Designed the match experience around team play and competition',
-      'Connected the game to the wider Drixil Interactive brand',
     ],
     liveUrl: 'https://drixil-group.vercel.app/interactive',
     liveLabel: 'View game page',
@@ -94,8 +101,23 @@ export const projects: Project[] = [
     ],
     liveUrl: 'https://www.tiktok.com/@furreal.aex',
     liveLabel: 'View creative work',
-    image: '/furreal.aex/profile picture.png',
-    imageAlt: 'Furreal.aex profile artwork showing a hooded figure',
+    gallery: [
+      {
+        src: '/furreal.aex/screenshots/tiktok-profile.webp',
+        alt: 'Furreal.aex TikTok profile showing published short-form edits and motion work',
+        label: 'TikTok',
+      },
+      {
+        src: '/furreal.aex/screenshots/instagram-profile.webp',
+        alt: 'Furreal.aex Instagram profile showing selected edits and motion projects',
+        label: 'Instagram',
+      },
+      {
+        src: '/furreal.aex/screenshots/youtube-channel.webp',
+        alt: 'Furreal Productions YouTube channel showing a collection of published video edits',
+        label: 'YouTube',
+      },
+    ],
     visual: 'editing',
     featured: true,
   },
@@ -119,7 +141,7 @@ export const projects: Project[] = [
     ],
     liveUrl: 'https://www.glamoursphairluxury.com/',
     liveLabel: 'Visit live site',
-    image: '/glamoursphair/logo.png',
+    image: '/glamoursphair/logo-hd.png',
     imageAlt: 'GLAMOURSPHAIR brand logo',
     visual: 'glamour',
     featured: true,
@@ -127,10 +149,10 @@ export const projects: Project[] = [
   {
     slug: 'calvision',
     title: 'CalVision',
-    label: 'AI nutrition product',
+    label: 'Final-year AI project',
     summary: 'A deep learning nutrition tool that recognizes African dishes and estimates calories and macros from a meal photo.',
-    description: 'CalVision is tailored for African food. It uses YOLO segmentation to identify foods in a meal image and estimate their portions. Users can review the results, correct detected items, view calories and macros, save meals, and follow their nutrition history.',
-    role: 'Full-stack product developer',
+    description: 'I built CalVision as my final-year project to make food recognition more relevant to African meals. It uses deep learning with YOLO segmentation to identify foods in a meal image and estimate their portions. Users can review the results, correct detected items, view calories and macros, save meals, and follow their nutrition history.',
+    role: 'Full-stack and AI developer',
     year: '2026',
     status: 'live',
     statusLabel: 'Live',
@@ -138,7 +160,7 @@ export const projects: Project[] = [
     category: 'product',
     tags: ['YOLO segmentation', 'Deep learning', 'African dishes', 'React'],
     highlights: [
-      'Focused the food data and interface on African dishes',
+      'Built the product as my final-year project with a focus on African dishes',
       'Used YOLO segmentation to identify food and estimate portions',
       'Built editable results, meal history, calorie totals, and macro views',
     ],
