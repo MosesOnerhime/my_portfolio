@@ -53,6 +53,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   const currentIndex = projects.findIndex((item) => item.slug === project.slug);
   const nextProject = projects[(currentIndex + 1) % projects.length];
+  const relatedUrls = [
+    ...(project.liveUrl ? [project.liveUrl] : []),
+    ...(project.codeUrl ? [project.codeUrl] : []),
+    ...(project.communityLinks?.map((link) => link.url) ?? []),
+  ];
 
   const projectJsonLd = {
     '@context': 'https://schema.org',
@@ -61,7 +66,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     description: project.summary,
     creator: { '@type': 'Person', name: 'Moses Onerhime' },
     url: `https://moses-onerhime-portfolio.vercel.app/work/${project.slug}`,
-    ...(project.liveUrl || project.codeUrl ? { sameAs: project.liveUrl ?? project.codeUrl } : {}),
+    ...(relatedUrls.length ? { sameAs: relatedUrls } : {}),
   };
 
   return (
@@ -111,6 +116,26 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 {project.year && <div><dt>Year</dt><dd>{project.year}</dd></div>}
                 <div><dt>Area</dt><dd>{project.label}</dd></div>
               </dl>
+              {project.communityLinks?.length ? (
+                <nav className="case-project-links" aria-label={`${project.title} community and social links`}>
+                  <p>Community and social</p>
+                  <ul>
+                    {project.communityLinks.map((link) => (
+                      <li key={link.url}>
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${link.label} for ${project.title} (opens in a new tab)`}
+                        >
+                          <span>{link.label}</span>
+                          <ExternalLink size={15} aria-hidden="true" />
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              ) : null}
             </aside>
 
             <div className="case-story">

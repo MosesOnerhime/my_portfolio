@@ -7,6 +7,11 @@ export interface ProjectImage {
   label: string;
 }
 
+export interface ProjectLink {
+  label: string;
+  url: string;
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -27,6 +32,7 @@ export interface Project {
   image?: string;
   imageAlt?: string;
   gallery?: ProjectImage[];
+  communityLinks?: ProjectLink[];
   visual: 'drixil' | 'glamour' | 'calvision' | 'beyond' | 'learning' | 'trading' | 'dental' | 'editing';
   featured?: boolean;
 }
@@ -77,6 +83,24 @@ export const projects: Project[] = [
     ],
     liveUrl: 'https://drixil-group.vercel.app/interactive',
     liveLabel: 'View game page',
+    communityLinks: [
+      {
+        label: 'Roblox community',
+        url: 'https://www.roblox.com/share/g/451345789',
+      },
+      {
+        label: 'TikTok',
+        url: 'https://www.tiktok.com/@beyond90.dev?is_from_webapp=1&sender_device=pc',
+      },
+      {
+        label: 'Instagram',
+        url: 'https://www.instagram.com/beyond90_studio/?__pwa=1',
+      },
+      {
+        label: 'YouTube',
+        url: 'https://youtube.com/@beyond90.studio?si=Mo7n4UFBoIQc0YUN',
+      },
+    ],
     image: '/beyond 90/thumbnail 3.png',
     imageAlt: 'Beyond 90 football pitch shown through a broadcast camera view',
     visual: 'beyond',
