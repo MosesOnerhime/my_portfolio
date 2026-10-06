@@ -1,10 +1,10 @@
 export const siteConfig = {
   name: 'Moses Onerhime',
   brand: 'Runo.dev',
-  url: 'https://moses-onerhime-portfolio.vercel.app',
+  url: 'https://www.mosesonerhime.com',
   email: 'mosesonerhime11@gmail.com',
   availability: 'Available for select projects',
-  description: 'Portfolio of Moses Onerhime, featuring software, websites, game development, AI and data projects, and video editing work.',
+  description: 'Portfolio of Moses Onerhime, a software and game developer, AI engineer, motion designer, and video editor.',
   socials: {
     github: 'https://github.com/MosesOnerhime',
     linkedin: 'https://www.linkedin.com/in/moses-onerhime-1438ba301/',
@@ -13,5 +13,13 @@ export const siteConfig = {
     youtube: 'https://www.youtube.com/@furrealproductions',
     whatsapp: 'https://wa.me/2348142962222',
     telegram: 'https://t.me/mo_real26',
+    discord: 'furreal.aep',
+  },
+  drixilInteractive: {
+    robloxCommunity: 'https://www.roblox.com/share/g/451345789',
+    tiktok: 'https://www.tiktok.com/@drixil.interactive',
+    instagram: 'https://www.instagram.com/drixil.interactive/',
+    youtube: 'https://www.youtube.com/@drixil.interactive',
+    x: 'https://x.com/drixil_inter',
   },
 } as const;

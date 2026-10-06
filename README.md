@@ -1,6 +1,6 @@
 # Moses Onerhime Portfolio
 
-A responsive portfolio for Moses Onerhime, featuring software, websites, game development, AI and data projects, and video editing work. Built with Next.js, TypeScript, and Tailwind CSS.
+A responsive portfolio for Moses Onerhime, featuring software, websites, game development, AI and data engineering, motion design, and video editing work. Built with Next.js, TypeScript, and Tailwind CSS.
 
 ## Student information
 
@@ -9,7 +9,7 @@ A responsive portfolio for Moses Onerhime, featuring software, websites, game de
 
 ## Links
 
-- Portfolio: https://moses-onerhime-portfolio.vercel.app/
+- Portfolio: https://www.mosesonerhime.com/
 - Repository: https://github.com/MosesOnerhime/my_portfolio
 
 ## Getting started
@@ -34,9 +34,10 @@ npm run build
 - `app/data/projects.ts` is the source of truth for project content, status, links, and ordering.
 - `app/components` contains shared interface components.
 - `app/work/[slug]` provides crawlable project case studies with unique metadata.
+- `app/links` provides a shareable, full-portfolio link hub.
 - `app/globals.css` contains the site design system and responsive styles.
 
-The portfolio includes accessible project filters, eight project case studies, responsive layouts, reduced-motion support, social metadata, a sitemap, robots rules, and direct contact options.
+The portfolio includes accessible project filters, ten project case studies, a curated portfolio link hub, responsive layouts, reduced-motion support, social metadata, a sitemap, robots rules, and direct contact options.
 
 ## License
 

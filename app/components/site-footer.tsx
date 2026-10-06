@@ -19,7 +19,7 @@ export function SiteFooter() {
         <Link className="brand-mark footer-brand" href="/" aria-label="Runo.dev, the portfolio of Moses Onerhime, home">
           <span>Runo</span><span className="brand-dot" aria-hidden="true" /><span>dev</span>
         </Link>
-        <p>Software, web, game, and AI developer. Video editor and creative director.</p>
+        <p>Software and game developer. AI engineer, motion designer, and creative director.</p>
       </div>
       <div className="social-links" aria-label="Social profiles">
         {socialLinks.map(({ href, label, icon: Icon }) => (

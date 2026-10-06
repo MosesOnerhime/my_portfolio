@@ -1,3 +1,5 @@
+import { siteConfig } from './site';
+
 export type ProjectCategory = 'web' | 'product' | 'creative';
 export type ProjectStatus = 'live' | 'in-development' | 'ongoing' | 'internship' | 'project';
 
@@ -12,12 +14,19 @@ export interface ProjectLink {
   url: string;
 }
 
+export interface ProjectLinkGroup {
+  label: string;
+  links: ProjectLink[];
+}
+
 export interface Project {
   slug: string;
   title: string;
   label: string;
   summary: string;
   description: string;
+  challenge?: string;
+  approach?: string;
   role: string;
   year?: string;
   status: ProjectStatus;
@@ -31,11 +40,20 @@ export interface Project {
   codeUrl?: string;
   image?: string;
   imageAlt?: string;
+  mark?: string;
   gallery?: ProjectImage[];
-  communityLinks?: ProjectLink[];
-  visual: 'drixil' | 'glamour' | 'calvision' | 'beyond' | 'learning' | 'trading' | 'dental' | 'editing';
+  linkGroups?: ProjectLinkGroup[];
+  visual: 'drixil' | 'glamour' | 'calvision' | 'beyond' | 'volleyball' | 'forge' | 'learning' | 'trading' | 'dental' | 'editing';
   featured?: boolean;
 }
+
+const drixilInteractiveLinks: ProjectLink[] = [
+  { label: 'Roblox community', url: siteConfig.drixilInteractive.robloxCommunity },
+  { label: 'Drixil Interactive on TikTok', url: siteConfig.drixilInteractive.tiktok },
+  { label: 'Drixil Interactive on Instagram', url: siteConfig.drixilInteractive.instagram },
+  { label: 'Drixil Interactive on YouTube', url: siteConfig.drixilInteractive.youtube },
+  { label: 'Drixil Interactive on X', url: siteConfig.drixilInteractive.x },
+];
 
 // The source order is the homepage priority order and is reused by case-study navigation.
 export const projects: Project[] = [
@@ -69,41 +87,95 @@ export const projects: Project[] = [
     title: 'Beyond 90',
     label: 'Game and original IP',
     summary: 'A Roblox football game in development, built around broadcast-style presentation and fluid, responsive play.',
-    description: 'Beyond 90 is the first active game from Drixil Interactive. I am developing its football systems and creative direction, with a broadcast camera intended to make each match feel like a televised game. Fluid controls and responsive mechanics are central to the experience I am building.',
+    description: 'Beyond 90 is a competitive Roblox football game where each player controls one footballer for the match. I am building the gameplay systems, broadcast presentation, interface, progression, and wider creative direction under Drixil Interactive.',
+    challenge: 'The game needs to feel like football rather than a generic Roblox ball game, while still working clearly on phone, keyboard and mouse, and gamepad. It also has to keep each player connected to one position and make team play readable through a broadcast camera.',
+    approach: 'I split the experience across Lobby, Match, and Training places, with a shared build and a server-authoritative rules layer. The current systems cover passing, shooting, reception, defending, goalkeeping, set pieces, AI footballers, replays, progression, customization, and touch-first interface patterns.',
     role: 'Game developer and creative director',
     status: 'in-development',
     statusLabel: 'In development',
-    statusNote: 'Beyond 90 is currently in development. Its Drixil Interactive page places the game within the wider studio.',
+    statusNote: 'Beyond 90 remains in active development. Its Roblox page is public, and the current build continues to evolve across gameplay, presentation, interface, and cross-device testing.',
     category: 'creative',
-    tags: ['Roblox', 'Gameplay systems', 'Broadcast camera', 'Creative direction'],
+    tags: ['Luau', 'Roblox', 'Server-authoritative gameplay', 'Broadcast camera', 'Cross-device UI'],
     highlights: [
-      'Designed the broadcast-camera presentation around the feel of a televised match',
-      'Developing fluid, responsive football mechanics for Roblox',
-      'Created the game identity and its visual direction',
+      'Designed the broadcast-camera presentation, replay direction, set-piece visuals, and match interface',
+      'Built football systems for passing, shooting, receiving, defending, goalkeeping, AI, and match rules',
+      'Structured separate Lobby, Match, and Training places around one shared codebase',
+      'Designed touch-first controls while supporting keyboard, mouse, and gamepad input',
     ],
-    liveUrl: 'https://drixil-group.vercel.app/interactive',
-    liveLabel: 'View game page',
-    communityLinks: [
+    liveUrl: 'https://www.roblox.com/games/138362130200118/Beyond-90',
+    liveLabel: 'Play on Roblox',
+    linkGroups: [
       {
-        label: 'Roblox community',
-        url: 'https://www.roblox.com/share/g/451345789',
+        label: 'Beyond 90 social',
+        links: [
+          { label: 'Beyond 90 on TikTok', url: 'https://www.tiktok.com/@beyond90.dev' },
+          { label: 'Beyond 90 on Instagram', url: 'https://www.instagram.com/beyond90_studio/' },
+          { label: 'Beyond 90 on YouTube', url: 'https://youtube.com/@beyond90.studio' },
+        ],
       },
-      {
-        label: 'TikTok',
-        url: 'https://www.tiktok.com/@beyond90.dev?is_from_webapp=1&sender_device=pc',
-      },
-      {
-        label: 'Instagram',
-        url: 'https://www.instagram.com/beyond90_studio/?__pwa=1',
-      },
-      {
-        label: 'YouTube',
-        url: 'https://youtube.com/@beyond90.studio?si=Mo7n4UFBoIQc0YUN',
-      },
+      { label: 'Drixil Interactive', links: drixilInteractiveLinks },
     ],
     image: '/beyond 90/thumbnail 3.png',
     imageAlt: 'Beyond 90 football pitch shown through a broadcast camera view',
     visual: 'beyond',
+    featured: true,
+  },
+  {
+    slug: 'volleyball-rally',
+    title: 'Volleyball Rally',
+    label: 'Roblox sports game',
+    summary: 'A fast 3v3 volleyball game built around simple controls, expressive rallies, and cross-device play.',
+    description: 'Volleyball Rally is an arcade indoor volleyball game from Drixil Interactive. I built its gameplay, presentation, interface, and multi-place structure around one clear idea: the game should be difficult because volleyball is difficult, not because the controls are confusing.',
+    challenge: 'Volleyball has several techniques and timing decisions that can become overwhelming on a phone or controller. The challenge was to keep serving, passing, setting, spiking, blocking, and diving readable without flattening the skill and positioning that make a rally satisfying.',
+    approach: 'I organized play around three intents: Control, Attack, and Hustle. Context turns those inputs into the right technique, while the camera handles aim. The server owns the match simulation and rules, AI athletes fill empty roster slots, and the same experience supports touch, keyboard and mouse, and gamepad.',
+    role: 'Game developer, designer, and creative director',
+    year: '2026',
+    status: 'in-development',
+    statusLabel: 'Playable build',
+    statusNote: 'Volleyball Rally has a public Roblox game page and a playable build. Development is continuing across gameplay, environments, progression, presentation, and cross-device testing.',
+    category: 'creative',
+    tags: ['Luau', 'Roblox', '3v3 gameplay', 'Server authority', 'Touch controls'],
+    highlights: [
+      'Built a three-intent control system for passing, setting, spiking, blocking, serving, and diving',
+      'Created server-authoritative match, ball-contact, scoring, matchmaking, and progression systems',
+      'Designed the experience for touch first, with keyboard, mouse, and gamepad support',
+      'Built AI athletes that fill open positions so a player can start a complete match without a full group',
+    ],
+    liveUrl: 'https://www.roblox.com/games/87714615725428/Volleyball-Rally',
+    liveLabel: 'Play on Roblox',
+    image: '/volleyball-rally/thumbnail.webp',
+    imageAlt: 'Volleyball Rally players contesting the ball above the net in a bright indoor arena',
+    mark: '/volleyball-rally/icon.webp',
+    linkGroups: [{ label: 'Drixil Interactive', links: drixilInteractiveLinks }],
+    visual: 'volleyball',
+    featured: true,
+  },
+  {
+    slug: 'forge',
+    title: 'Forge',
+    label: 'Fitness tracking product',
+    summary: 'A mobile-first fitness PWA for workouts, nutrition, progress, private media, and fast set logging.',
+    description: 'Forge is a private gym, nutrition, and physique tracker. I built it to make set logging feel immediate during a workout while keeping plans, food, measurements, photos, and reference media connected in one product.',
+    challenge: 'A workout tracker has to stay quick while someone is training, protect private health and media data, and remain honest when the network drops. The core flow could not make a failed save look successful or bury the next set behind desktop-sized navigation.',
+    approach: 'I built Forge as a mobile-first Next.js PWA with Supabase Auth, PostgreSQL Row Level Security, and private Storage. It includes a durable offline queue for workout sets, a rest timer that survives navigation and reloads, reusable routine templates, and signed access to private exercise images and videos.',
+    role: 'Product designer and full-stack developer',
+    year: '2026',
+    status: 'live',
+    statusLabel: 'Live',
+    statusNote: 'Forge is deployed as a live web application. Account access is required for the private tracking experience, and development continues as more real-world flows are verified.',
+    category: 'product',
+    tags: ['Next.js', 'TypeScript', 'Supabase', 'PWA', 'Offline sync'],
+    highlights: [
+      'Built workout, nutrition, progress, journal, goals, settings, and routine-template flows',
+      'Protected user data with owner-scoped PostgreSQL policies and private media storage',
+      'Added queued offline set logging with clear waiting and retry states',
+      'Designed and tested responsive workout flows for desktop and 390px mobile layouts',
+    ],
+    liveUrl: 'https://forge-runo.vercel.app/',
+    liveLabel: 'Open live app',
+    image: '/forge/dashboard.webp',
+    imageAlt: 'Forge dashboard showing a training plan, nutrition summary, and workout logging interface',
+    visual: 'forge',
     featured: true,
   },
   {
@@ -138,7 +210,7 @@ export const projects: Project[] = [
       },
       {
         src: '/furreal.aex/screenshots/youtube-channel.webp',
-        alt: 'Furreal Productions YouTube channel showing a collection of published video edits',
+        alt: 'Furreal.aex YouTube channel showing a collection of published video edits',
         label: 'YouTube',
       },
     ],

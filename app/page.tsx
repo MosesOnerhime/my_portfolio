@@ -48,9 +48,9 @@ const capabilities = [
   {
     icon: Clapperboard,
     number: '05',
-    title: 'Video editing',
-    copy: 'I turn raw footage into focused visual stories through pacing, colour, motion graphics, transitions, and sound.',
-    skills: 'Premiere Pro, After Effects, DaVinci Resolve, sound design',
+    title: 'Motion design and video editing',
+    copy: 'I design motion and turn raw footage into focused visual stories through pacing, animation, colour, transitions, and sound.',
+    skills: 'After Effects, Premiere Pro, DaVinci Resolve, motion graphics, sound design',
   },
   {
     icon: Workflow,
@@ -77,7 +77,7 @@ export default function Home() {
             <p className="eyebrow"><span className="status-dot" /> {siteConfig.availability}</p>
             <h1 id="hero-title">Moses<span>Onerhime.</span></h1>
             <p className="hero-intro">
-              I build software, websites, games, AI tools, and visual stories. My work brings development, data, design, and motion together.
+              I am a software and game developer, AI engineer, and motion designer building useful products, interactive experiences, and visual stories.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">Explore my work <ArrowDownRight size={18} aria-hidden="true" /></a>
@@ -119,10 +119,10 @@ export default function Home() {
             <span className="about-number" aria-hidden="true">MO</span>
           </div>
           <div className="about-copy">
-            <h2 id="about-title">I build software, websites, games, AI systems, and visual stories.</h2>
+            <h2 id="about-title">I build software, games, AI systems, motion, and visual stories.</h2>
             <div className="about-columns">
               <p>I am a software, website, and game developer based in Nigeria. I also work in AI and data engineering, using machine and deep learning to build models for specific problems and useful products.</p>
-              <p>I create under <strong>Drixil</strong> and edit video as Furreal.aex. Working across code, gameplay, animation, sound, interface design, data, and storytelling helps me bring a different perspective to every project.</p>
+              <p>I am also a motion designer and video editor. I create games under <strong>Drixil Interactive</strong> and publish editing and motion work as Furreal.aex. Working across code, gameplay, animation, sound, interface design, data, and storytelling helps me bring a different perspective to every project.</p>
             </div>
             <div className="about-vision">
               <p className="eyebrow">A direction I care about</p>

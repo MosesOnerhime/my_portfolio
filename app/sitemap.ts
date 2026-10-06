@@ -5,6 +5,7 @@ import { siteConfig } from './data/site';
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: siteConfig.url, changeFrequency: 'monthly', priority: 1 },
+    { url: `${siteConfig.url}/links`, changeFrequency: 'monthly', priority: 0.8 },
     ...projects.map((project) => ({
       url: `${siteConfig.url}/work/${project.slug}`,
       changeFrequency: 'monthly' as const,

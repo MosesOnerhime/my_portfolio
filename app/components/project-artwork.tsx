@@ -32,14 +32,21 @@ export function ProjectArtwork({
 
   if (project.image) {
     return (
-      <Image
-        src={project.image}
-        alt={project.imageAlt ?? ''}
-        fill
-        priority={priority}
-        sizes={sizes}
-        className="project-image"
-      />
+      <>
+        <Image
+          src={project.image}
+          alt={project.imageAlt ?? ''}
+          fill
+          priority={priority}
+          sizes={sizes}
+          className="project-image"
+        />
+        {project.mark ? (
+          <span className="project-mark" aria-hidden="true">
+            <Image src={project.mark} alt="" fill sizes="96px" />
+          </span>
+        ) : null}
+      </>
     );
   }
 

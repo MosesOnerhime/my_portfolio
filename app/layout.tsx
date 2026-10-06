@@ -4,15 +4,15 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: { default: 'Moses Onerhime | Developer, AI Engineer, and Creative Director', template: '%s | Moses Onerhime' },
+  title: { default: 'Moses Onerhime | Developer, AI Engineer, and Motion Designer', template: '%s | Moses Onerhime' },
   description: siteConfig.description,
-  keywords: ['Moses Onerhime', 'full-stack developer', 'game developer', 'creative director', 'React developer', 'Next.js developer', 'Nigeria'],
+  keywords: ['Moses Onerhime', 'full-stack developer', 'game developer', 'Roblox developer', 'AI engineer', 'motion designer', 'creative director', 'React developer', 'Next.js developer', 'Nigeria'],
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Moses Onerhime | Developer, AI Engineer, and Creative Director',
-    description: 'Explore software, websites, games, AI and data work, and video editing by Moses Onerhime.',
+    title: 'Moses Onerhime | Developer, AI Engineer, and Motion Designer',
+    description: 'Explore software, websites, games, AI and data work, motion design, and video editing by Moses Onerhime.',
     url: '/',
     siteName: 'Moses Onerhime Portfolio',
     locale: 'en_NG',
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Moses Onerhime | Developer, AI Engineer, and Creative Director',
-    description: 'Selected software, web, game, AI, data, and creative work.',
+    title: 'Moses Onerhime | Developer, AI Engineer, and Motion Designer',
+    description: 'Selected software, web, game, AI, motion design, and creative work.',
     images: ['/opengraph-image'],
   },
   icons: {

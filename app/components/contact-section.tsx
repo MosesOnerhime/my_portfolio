@@ -17,7 +17,7 @@ export function ContactSection({ compact = false }: { compact?: boolean }) {
       </div>
       {!compact && (
         <div className="contact-details" aria-label="More ways to contact me">
-          <span><MessageSquare size={16} aria-hidden="true" /> Discord: furreal.aep</span>
+          <span><MessageSquare size={16} aria-hidden="true" /> Discord: {siteConfig.socials.discord}</span>
           <a href={siteConfig.socials.telegram} target="_blank" rel="noopener noreferrer"><Send size={16} aria-hidden="true" /> Telegram: @mo_real26</a>
           <span><MessageCircle size={16} aria-hidden="true" /> WhatsApp: 08142962222</span>
         </div>

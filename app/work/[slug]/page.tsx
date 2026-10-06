@@ -7,6 +7,7 @@ import { ProjectArtwork } from '../../components/project-artwork';
 import { SiteFooter } from '../../components/site-footer';
 import { SiteHeader } from '../../components/site-header';
 import { getProject, projects } from '../../data/projects';
+import { siteConfig } from '../../data/site';
 
 type ProjectPageProps = {
   params: Promise<{ slug: string }>;
@@ -56,7 +57,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const relatedUrls = [
     ...(project.liveUrl ? [project.liveUrl] : []),
     ...(project.codeUrl ? [project.codeUrl] : []),
-    ...(project.communityLinks?.map((link) => link.url) ?? []),
+    ...(project.linkGroups?.flatMap((group) => group.links.map((link) => link.url)) ?? []),
   ];
 
   const projectJsonLd = {
@@ -65,7 +66,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     name: project.title,
     description: project.summary,
     creator: { '@type': 'Person', name: 'Moses Onerhime' },
-    url: `https://moses-onerhime-portfolio.vercel.app/work/${project.slug}`,
+    url: `${siteConfig.url}/work/${project.slug}`,
     ...(relatedUrls.length ? { sameAs: relatedUrls } : {}),
   };
 
@@ -116,11 +117,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 {project.year && <div><dt>Year</dt><dd>{project.year}</dd></div>}
                 <div><dt>Area</dt><dd>{project.label}</dd></div>
               </dl>
-              {project.communityLinks?.length ? (
-                <nav className="case-project-links" aria-label={`${project.title} community and social links`}>
-                  <p>Community and social</p>
+              {project.linkGroups?.map((group) => (
+                <nav className="case-project-links" aria-label={`${group.label} links for ${project.title}`} key={group.label}>
+                  <p>{group.label}</p>
                   <ul>
-                    {project.communityLinks.map((link) => (
+                    {group.links.map((link) => (
                       <li key={link.url}>
                         <a
                           href={link.url}
@@ -135,7 +136,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     ))}
                   </ul>
                 </nav>
-              ) : null}
+              ))}
             </aside>
 
             <div className="case-story">
@@ -144,6 +145,22 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 <h2 id="context-title">What I worked on</h2>
                 <p className="case-body-copy">{project.description}</p>
               </section>
+
+              {project.challenge ? (
+                <section aria-labelledby="challenge-title">
+                  <p className="eyebrow">Challenge</p>
+                  <h2 id="challenge-title">What the project needed</h2>
+                  <p className="case-body-copy">{project.challenge}</p>
+                </section>
+              ) : null}
+
+              {project.approach ? (
+                <section aria-labelledby="approach-title">
+                  <p className="eyebrow">Approach</p>
+                  <h2 id="approach-title">How I structured the work</h2>
+                  <p className="case-body-copy">{project.approach}</p>
+                </section>
+              ) : null}
 
               <section aria-labelledby="contribution-title">
                 <p className="eyebrow">My contribution</p>

@@ -9,6 +9,8 @@ The homepage currently presents:
 - Moses Onerhime;
 - full-stack developer;
 - game developer;
+- AI engineer;
+- motion designer and video editor;
 - creative director;
 - useful products;
 - interactive experiences;
@@ -19,6 +21,7 @@ The current top-level navigation exposes:
 - Work;
 - About;
 - Capabilities;
+- Links;
 - Let's talk.
 
 The site also uses the `Runodev` label/brand in navigation/footer.
@@ -41,12 +44,14 @@ The publicly visible work list currently includes:
 
 1. Drixil Group
 2. Beyond 90
-3. Furreal.aex
-4. GLAMOURSPHAIR
-5. CalVision
-6. PPFN Learning System
-7. Stock Trading App
-8. Dental Clinic App
+3. Volleyball Rally
+4. Forge
+5. Furreal.aex
+6. GLAMOURSPHAIR
+7. CalVision
+8. PPFN Learning System
+9. Stock Trading App
+10. Dental Clinic App
 
 Do not remove projects merely to satisfy a generic “3–5 projects only” rule.
 
@@ -127,8 +132,10 @@ The homepage currently lists:
 - Experience design;
 - Creative direction;
 - Game development.
+- Motion design and video editing;
+- DevOps and delivery.
 
-This matches the four-discipline summary and is a useful information architecture.
+These groups support the multidisciplinary summary and are a useful information architecture.
 
 Audit whether capability descriptions:
 
@@ -144,6 +151,8 @@ The page currently has a strong direct-contact ending:
 - `Let's work together`;
 - conversation CTA;
 - external communication/social channels.
+
+The separate `/links` route is an editorial link hub that groups the main portfolio, product, game, motion, professional, social, and contact destinations. It is the shareable full-portfolio alternative to a single-brand Linktree page and is available from the site navigation.
 
 Preserve verified destinations.
 
