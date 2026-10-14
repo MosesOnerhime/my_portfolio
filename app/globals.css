@@ -528,6 +528,17 @@ img { display: block; }
 .motion-facts dt { display: flex; align-items: center; gap: .55rem; color: rgba(255,255,255,.58); font-family: var(--font-mono); font-size: .64rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 .motion-facts dd { font-size: .94rem; font-weight: 650; }
 
+.motion-feature + .motion-feature { border-top: 1px solid rgba(255,255,255,.14); border-radius: 0; }
+.motion-feature-landscape { grid-template-columns: 1fr; gap: clamp(2.5rem, 5vw, 4.5rem); }
+.motion-feature-landscape .motion-stage { width: 100%; max-width: 1420px; min-height: 0; margin-inline: auto; padding: clamp(1.5rem, 4vw, 3.5rem); }
+.motion-feature-landscape .motion-stage-index { top: .65rem; left: .9rem; }
+.motion-feature-landscape .motion-stage video { width: 100%; max-height: none; aspect-ratio: 16 / 9; object-fit: contain; }
+.motion-feature-landscape .motion-story { width: 100%; max-width: 1420px; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 1.5rem clamp(2rem, 6vw, 6rem); margin-inline: auto; }
+.motion-feature-landscape .motion-story-heading, .motion-feature-landscape .motion-story-copy { grid-column: 1; }
+.motion-feature-landscape h2 { font-size: clamp(2.5rem, 4.5vw, 5.5rem); line-height: .95; }
+.motion-feature-landscape .motion-facts { grid-column: 2; grid-row: 1 / 3; align-self: start; }
+.motion-feature-landscape .motion-facts > div { grid-template-columns: 1fr; gap: .55rem; }
+
 .motion-coming {
   padding-top: clamp(6rem, 10vw, 10rem);
   padding-bottom: clamp(6rem, 10vw, 10rem);
@@ -722,6 +733,8 @@ img { display: block; }
   .motion-stage video { width: min(100%, 390px); }
   .motion-story h2 { font-size: clamp(3rem, 15vw, 5.3rem); }
   .motion-facts > div { grid-template-columns: 1fr; gap: .55rem; }
+  .motion-feature-landscape .motion-story { grid-template-columns: 1fr; }
+  .motion-feature-landscape .motion-facts { grid-column: 1; grid-row: auto; }
   .motion-coming-heading { grid-template-columns: 1fr; align-items: start; gap: 1rem; }
   .motion-coming-heading .eyebrow { grid-column: auto; }
   .motion-coming-heading h2 { font-size: clamp(3rem, 14vw, 5.3rem); }

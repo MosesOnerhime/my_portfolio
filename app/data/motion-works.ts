@@ -6,6 +6,7 @@ export type MotionWork = {
   contribution: string;
   format: string;
   tools: string[];
+  orientation: 'portrait' | 'landscape';
   videoSrc: string;
   posterSrc: string;
 };
@@ -20,8 +21,22 @@ export const motionWorks: MotionWork[] = [
     contribution: 'Motion design, animation, editing, and sound design',
     format: '20 seconds · 9:16 · Sound effects',
     tools: ['HyperFrames', 'HTML/CSS', 'GSAP'],
+    orientation: 'portrait',
     videoSrc: '/motion/wizeup-promo.mp4',
     posterSrc: '/motion/wizeup-promo-poster.webp',
+  },
+  {
+    slug: 'approovia-workspace',
+    title: 'Approovia Workspace Manager',
+    label: 'Product motion · Software showcase',
+    description:
+      'A 30-second showcase of Approovia Workspace Manager. The film moves from scattered work to one connected process, using animated product interfaces to show form creation, workflow building, and staged approvals.',
+    contribution: 'Motion design, animation, and editing',
+    format: '30 seconds · 16:9 · Music and sound effects',
+    tools: ['HyperFrames', 'HTML/CSS', 'GSAP'],
+    orientation: 'landscape',
+    videoSrc: '/motion/approovia-workspace.mp4',
+    posterSrc: '/motion/approovia-workspace-poster.webp',
   },
 ];
 

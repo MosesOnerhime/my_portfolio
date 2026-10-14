@@ -155,17 +155,17 @@ The page currently has a strong direct-contact ending:
 
 The separate `/links` route is an editorial link hub that groups the main portfolio, product, game, motion, professional, social, and contact destinations. It is the shareable full-portfolio alternative to a single-brand Linktree page and is available from the site navigation.
 
-The separate `/motion` route is the shareable motion-design archive. It currently leads with the completed Wizeup vertical product promo and uses clearly labelled empty positions for work Moses has not supplied yet. It is linked from both the main navigation and the `/links` hub.
+The separate `/motion` route is the shareable motion-design archive. It leads with the completed Wizeup vertical product promo, followed by the Approovia Workspace Manager landscape film, and uses clearly labelled empty positions for work Moses has not supplied yet. It is linked from both the main navigation and the `/links` hub.
 
 ## Motion archive and shared motion baseline
 
-The `/motion` introduction is concise enough to expose the real Wizeup video in the opening viewport. The featured piece uses native, user-controlled inline playback with metadata preloading, a poster, and no autoplay. Its context, contribution, format, and production tools come from the supplied project; the three future-work positions remain explicitly reserved rather than implying completed work.
+The `/motion` introduction is concise enough to expose the real Wizeup video in the opening viewport. The archive renders all records in `motionWorks`, currently Wizeup and Approovia Workspace Manager. Both pieces use native, user-controlled inline playback, distinct accessible names, posters, and no autoplay. The first uses metadata preloading; the second uses `preload="none"`. Their context, contribution, format, and production tools come from the supplied projects; the three future-work positions remain explicitly reserved rather than implying completed work.
 
 The archive preserves the existing Runo.dev editorial identity: the same type direction, paper-and-ink palette, generous section rhythm, numbered work, and direct contact ending. The portrait video and its project story extend the work presentation without replacing the site's visual world. `DESIGN.md` remains unchanged.
 
 Shared motion uses bounded editorial and media arrivals, grouped reveals, and faster icon and press feedback. Pending content stays visible before enhancement and when intersection events are missed. Reduced motion removes spatial entrances and delays, and revealed content releases its transform so hover and focus feedback can still work.
 
-Final browser QA on 14 October 2026 is recorded in `.impeccable/review/qa-results.json`:
+The original archive and shared motion browser QA on 14 October 2026, before the Approovia addition, is recorded in `.impeccable/review/qa-results.json`:
 
 - 17 route/viewport checks across `/motion`, `/`, `/links`, and `/work/beyond-90` found no horizontal overflow and one H1 per page.
 - `/motion` was checked from 360px to 1920px wide. About 524px of the video is visible at 1440 × 1000 and 307px at 390 × 844 before scrolling.
@@ -173,7 +173,21 @@ Final browser QA on 14 October 2026 is recorded in `.impeccable/review/qa-result
 - Mobile menu focus and Escape restoration, keyboard filtering between Creative (3) and All work (10), and native keyboard video play/pause passed.
 - The browser checks recorded zero console errors. Production build, lint, and TypeScript checks passed; the build generated 19 static pages.
 
-The finish review recommends ship with first-viewport prominence and reveal persistence resolved. Physical-device and assistive-technology testing, plus field Core Web Vitals, are not established by these checks.
+The original finish review recommended ship with first-viewport prominence and reveal persistence resolved. These measurements remain historical evidence for that update. Physical-device and assistive-technology testing, plus field Core Web Vitals, are not established by these checks.
+
+### Approovia addition
+
+Approovia Workspace Manager is the second real motion piece: a 30-second 16:9 software showcase about form creation, workflow building, and staged approvals. The source brief, storyboard, and production report support the story and HyperFrames, HTML/CSS, and GSAP tool list. The selected `approovia-workspace-landscape-with-music.mp4` source remains unchanged.
+
+The web copy at `public/motion/approovia-workspace.mp4` is 1280 × 720 at 30 fps and 2,992,085 bytes, with the supplied music and sound effects preserved. Its 38,682-byte WebP poster comes from the actual film at 7.5 seconds. Wizeup keeps its 9:16 presentation; Approovia uses a 16:9 landscape stage and a project story that stacks on mobile. Real pieces are numbered 01/02, and future positions are derived from the real-work count as 03–05. The existing editorial identity and `DESIGN.md` remain unchanged.
+
+Addition QA is recorded in `.impeccable/review/approovia-qa.json`:
+
+- Eight widths from 360px to 1920px passed without horizontal overflow or landscape-player cropping; both native players and the derived numbering were present.
+- Keyboard play/pause passed for both players. The second used `preload="none"` and remained paused before user input; reduced-motion content stayed visible and static.
+- Browser QA recorded zero console errors. Lint, TypeScript, and production build passed again, with 19 static pages generated.
+
+The scoped Approovia finish review recommends ship with no material fixes after confirming the landscape composition, mobile stacking, verified copy, and native playback behavior.
 
 ## Contact audit considerations
 

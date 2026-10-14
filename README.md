@@ -32,6 +32,7 @@ npm run build
 ## Structure
 
 - `app/data/projects.ts` is the source of truth for project content, status, links, and ordering.
+- `app/data/motion-works.ts` controls motion pieces, video/poster paths, portrait or landscape presentation, and future-work slots. Every record is rendered by the archive.
 - `app/components` contains shared interface components.
 - `app/work/[slug]` provides crawlable project case studies with unique metadata.
 - `app/motion` provides a shareable motion-work archive with optimized, user-controlled video.

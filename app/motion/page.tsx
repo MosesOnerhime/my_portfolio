@@ -28,8 +28,6 @@ export const metadata: Metadata = {
 };
 
 export default function MotionPage() {
-  const featuredWork = motionWorks[0];
-
   return (
     <div className="site-shell motion-page">
       <a href="#main" className="skip-link">Skip to main content</a>
@@ -42,49 +40,56 @@ export default function MotionPage() {
           </div>
           <div className="motion-hero-intro" data-reveal-group>
             <p>
-              Product motion, animated interfaces, edits, and visual experiments. Here is the first piece, with more work on the way.
+              Product motion, animated interfaces, edits, and visual experiments. A few finished pieces, with more work on the way.
             </p>
             <a href="#featured-motion">Watch the first piece <ArrowDown size={18} aria-hidden="true" /></a>
           </div>
         </section>
 
-        <section id="featured-motion" className="motion-feature section-pad" aria-labelledby={`${featuredWork.slug}-title`}>
-          <div className="motion-stage" data-entrance="motion-media">
-            <span className="motion-stage-index" aria-hidden="true">01</span>
-            <video
-              aria-label="Wizeup product promo by Moses Onerhime"
-              controls
-              playsInline
-              preload="metadata"
-              poster={featuredWork.posterSrc}
-            >
-              <source src={featuredWork.videoSrc} type="video/mp4" />
-              Your browser does not support embedded video. You can still contact Moses for a copy of the work.
-            </video>
-          </div>
-
-          <article className="motion-story" data-reveal-group>
-            <div className="motion-story-heading">
-              <p className="eyebrow">{featuredWork.label}</p>
-              <h2 id={`${featuredWork.slug}-title`}>{featuredWork.title}</h2>
+        {motionWorks.map((work, index) => (
+          <section
+            id={index === 0 ? 'featured-motion' : work.slug}
+            className={`motion-feature motion-feature-${work.orientation} section-pad`}
+            aria-labelledby={`${work.slug}-title`}
+            key={work.slug}
+          >
+            <div className="motion-stage" data-entrance={index === 0 ? 'motion-media' : undefined} data-reveal={index > 0 ? 'scale' : undefined}>
+              <span className="motion-stage-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+              <video
+                aria-label={`${work.title} by Moses Onerhime`}
+                controls
+                playsInline
+                preload={index === 0 ? 'metadata' : 'none'}
+                poster={work.posterSrc}
+              >
+                <source src={work.videoSrc} type="video/mp4" />
+                Your browser does not support embedded video. <a href={work.videoSrc}>Open {work.title}</a>.
+              </video>
             </div>
-            <p className="motion-story-copy">{featuredWork.description}</p>
-            <dl className="motion-facts">
-              <div>
-                <dt><Clapperboard size={17} aria-hidden="true" /> Contribution</dt>
-                <dd>{featuredWork.contribution}</dd>
+
+            <article className="motion-story" data-reveal-group>
+              <div className="motion-story-heading">
+                <p className="eyebrow">{work.label}</p>
+                <h2 id={`${work.slug}-title`}>{work.title}</h2>
               </div>
-              <div>
-                <dt><Clock3 size={17} aria-hidden="true" /> Format</dt>
-                <dd>{featuredWork.format}</dd>
-              </div>
-              <div>
-                <dt><Layers3 size={17} aria-hidden="true" /> Built with</dt>
-                <dd>{featuredWork.tools.join(', ')}</dd>
-              </div>
-            </dl>
-          </article>
-        </section>
+              <p className="motion-story-copy">{work.description}</p>
+              <dl className="motion-facts">
+                <div>
+                  <dt><Clapperboard size={17} aria-hidden="true" /> Contribution</dt>
+                  <dd>{work.contribution}</dd>
+                </div>
+                <div>
+                  <dt><Clock3 size={17} aria-hidden="true" /> Format</dt>
+                  <dd>{work.format}</dd>
+                </div>
+                <div>
+                  <dt><Layers3 size={17} aria-hidden="true" /> Built with</dt>
+                  <dd>{work.tools.join(', ')}</dd>
+                </div>
+              </dl>
+            </article>
+          </section>
+        ))}
 
         <section className="motion-coming section-pad" aria-labelledby="motion-coming-title">
           <div className="motion-coming-heading" data-reveal-group>
@@ -96,7 +101,7 @@ export default function MotionPage() {
           <div className="motion-placeholder-grid" data-reveal-group="scale">
             {motionPlaceholders.map((title, index) => (
               <article className="motion-placeholder" key={title}>
-                <span>{String(index + 2).padStart(2, '0')}</span>
+                <span>{String(motionWorks.length + index + 1).padStart(2, '0')}</span>
                 <Sparkles size={22} aria-hidden="true" />
                 <div>
                   <h3>{title}</h3>

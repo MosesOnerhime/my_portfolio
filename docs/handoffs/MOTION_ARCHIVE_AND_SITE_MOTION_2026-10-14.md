@@ -1,6 +1,6 @@
 # Motion Archive and Site Motion Handoff, 14 October 2026
 
-## Implemented
+## Original archive implementation
 
 - Added a dedicated `/motion` route that can be shared independently of the homepage.
 - Featured the real Wizeup vertical promo with native controls, inline playback, metadata preloading, and no autoplay.
@@ -13,7 +13,7 @@
 - Kept pending content visible before and after JavaScript enhancement, including when observer events are missed, and added a reduced-motion path that removes spatial entrances and delays.
 - Preserved the existing editorial layout, typography, paper-and-ink palette, project hierarchy, and `Code · Games · Design · Motion` identity.
 
-## Media preparation
+## Original Wizeup media preparation
 
 - Source master: 15.9 MB, 1080 × 1920, 60 fps, H.264/AAC.
 - Web video: `public/motion/wizeup-promo.mp4`, about 1.67 MB, 720 × 1280, 30 fps, H.264/AAC, fast-start enabled.
@@ -34,13 +34,13 @@ The archive extends the existing Runo.dev editorial world: oversized authored he
 
 The shared motion follows the same hierarchy. Short arrivals emphasize grouped content and media, while controls retain faster feedback. The existing `DESIGN.md` remains the design authority; it was not rewritten and no design sidecar was created.
 
-## Validation
+## Original update validation, before the Approovia addition
 
 - `npm run lint`: passed.
 - `npx tsc --noEmit`: passed.
 - `npm run build`: passed; 19 static pages generated, including `/motion`, `/links`, and all 10 case-study routes.
 - Impeccable mechanical detector: passed with no findings.
-- Final browser evidence is recorded in `.impeccable/review/qa-results.json`.
+- Browser evidence for the original archive and shared motion update is recorded in `.impeccable/review/qa-results.json`.
 - All 17 route/viewport layout checks found one H1 and no horizontal overflow: `/motion` at 360, 390, 430, 768, 1024, 1280, 1440, and 1920 pixel widths; `/`, `/links`, and `/work/beyond-90` at 390, 768, and 1440 pixel widths.
 - The opening viewport contains about 524px of the Wizeup video at 1440 × 1000 and 307px at 390 × 844. The archive introduction no longer pushes the real work below the fold.
 - Desktop and 390px mobile captures reviewed for the motion hero, featured video, future-work placeholders, and contact close.
@@ -51,6 +51,35 @@ The shared motion follows the same hierarchy. Short arrivals emphasize grouped c
 - The final browser QA recorded zero console errors.
 - Reduced-motion behavior was checked in the browser, including the footer's immediate visible state. Physical-device and assistive-technology testing remain external QA steps.
 
-The finish review recommends ship after confirming that first-viewport artifact prominence and reveal persistence are resolved. This verdict applies to the implemented archive and shared motion changes; it does not claim measured field Core Web Vitals or a complete assistive-technology audit.
+The original finish review recommended ship after confirming that first-viewport artifact prominence and reveal persistence were resolved. These checks and measurements remain historical evidence for that archive and shared motion update; they do not claim measured field Core Web Vitals or a complete assistive-technology audit.
 
 The production build reports that the local Browserslist data is 10 months old. It does not fail the build, and dependencies were intentionally left unchanged for this feature.
+
+## Approovia addition
+
+Added Approovia Workspace Manager as the archive's second real piece. The supplied 30-second landscape film shows form creation, workflow building, and staged approvals through animated product interfaces. Its brief, storyboard, and production report support the project story; the recorded tools are HyperFrames, HTML/CSS, and GSAP. The portfolio credits motion design, animation, and editing without adding music-ownership or campaign-outcome claims.
+
+### Media preparation
+
+- Selected source: `D:/repos/Motion Graphics/Approovia/videos/deliverables/approovia-workspace-landscape-with-music.mp4`, 30 seconds, 1920 × 1080, 60 fps, H.264/AAC, 21,075,902 bytes (about 21.1 MB).
+- Web copy: `public/motion/approovia-workspace.mp4`, 1280 × 720, 30 fps, 2,992,085 bytes. The supplied music and sound effects are preserved.
+- Poster: `public/motion/approovia-workspace-poster.webp`, a frame from 7.5 seconds into the actual film, 38,682 bytes.
+- The source file and source project were not modified.
+
+### Archive behavior and identity
+
+The renderer now maps every record in `motionWorks`. Orientation-aware layouts retain Wizeup's 9:16 portrait framing and Approovia's 16:9 landscape framing. The landscape stage uses the archive's existing editorial treatment with its project story underneath, and the story stacks into one column on mobile. The same type direction, palette, numbered-work pattern, contact ending, and reduced-motion behavior remain in place; `DESIGN.md` is unchanged.
+
+Both players use native controls and distinguishable accessible names, inline playback, and no autoplay. The first video retains metadata preloading; the second uses `preload="none"`. Real pieces are numbered 01 and 02, and future-work numbering is derived from the real-work count, producing reserved positions 03–05.
+
+### Addition validation
+
+Evidence for this addition is recorded separately in `.impeccable/review/approovia-qa.json`:
+
+- `/motion` passed eight width checks at 360, 390, 430, 768, 1024, 1280, 1440, and 1920px with no horizontal overflow. The Approovia player retained 16:9 framing with `object-fit: contain`, avoiding aspect-ratio cropping.
+- Each check found two native players, one H1, real-work numbers 01/02, and future positions 03/04/05. The second player had native controls, `preload="none"`, and remained paused before user input.
+- Native keyboard play and pause passed for both players. Reduced-motion content remained visible and static.
+- Browser QA recorded zero console errors.
+- Lint, TypeScript, and production build passed again; the build generated 19 static pages.
+
+The scoped finish review recommends ship with no material fixes. It confirmed faithful landscape composition, mobile stacking without cropping or overflow, evidence-backed copy, and native playback controls with no autoplay or second-video preloading. This addition's verdict is separate from the original archive and site-motion review above.

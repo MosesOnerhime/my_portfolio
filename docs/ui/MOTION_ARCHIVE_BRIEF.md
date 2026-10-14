@@ -15,7 +15,7 @@ The first viewport introduces the archive with `Motion work.` and a short explan
 ## Content structure
 
 1. Brief introduction to Moses's motion practice.
-2. Featured Wizeup promo with user-controlled playback.
+2. Wizeup portrait promo followed by Approovia Workspace Manager's landscape showcase, both with user-controlled playback.
 3. Verified context, contribution, format, and tools.
 4. Clearly labelled future-work slots that do not imitate completed projects.
 5. A direct contact path for motion work.
@@ -27,10 +27,11 @@ The authored moment is a clean editorial arrival: headings and supporting lines 
 ## Responsive behavior
 
 - Desktop pairs the portrait media with its project story.
+- Landscape pieces use a wide player above the project story so product interfaces remain readable and the original composition is preserved.
 - Tablet keeps the media prominent without creating narrow text columns.
 - Mobile uses a single reading column, full-width controls, and a naturally sized portrait player.
 - No essential content or action depends on hover.
 
 ## Evidence boundaries
 
-The Wizeup copy may describe the supplied 20-second vertical promo, its JAMB-preparation audience, its shown product features, and the production methods verified in its repository. It must not claim campaign results, release status, client approval, or performance metrics. Other slots stay explicitly empty until Moses supplies the work.
+The Wizeup copy may describe the supplied 20-second vertical promo, its JAMB-preparation audience, its shown product features, and the production methods verified in its repository. The Approovia copy may describe its 30-second Workspace Manager showcase and the form creation, workflow, and approval interfaces shown in the film. Neither entry should claim campaign results, release status, client approval, or performance metrics. Other slots stay explicitly empty until Moses supplies the work.
