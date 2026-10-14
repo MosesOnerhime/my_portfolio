@@ -21,7 +21,7 @@ export function ProjectShowcase() {
 
   return (
     <>
-      <div className="project-filter-row">
+      <div className="project-filter-row" data-reveal="up">
         <div className="project-toolbar" role="group" aria-label="Filter projects by type">
           {filters.map((filter) => (
             <button
@@ -40,7 +40,7 @@ export function ProjectShowcase() {
         </p>
       </div>
 
-      <div className="project-grid">
+      <div className="project-grid" data-reveal-group="scale">
         {visibleProjects.map((project, index) => (
           <article className={`project-card ${project.featured ? 'project-featured' : ''}`} key={project.slug}>
             <div className={`project-visual visual-${project.visual}`}>

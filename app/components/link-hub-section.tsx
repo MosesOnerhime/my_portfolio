@@ -51,6 +51,7 @@ const linkGroups: Array<{ title: string; links: HubLink[] }> = [
   {
     title: 'Motion and media',
     links: [
+      { label: 'Motion archive', note: 'Product motion, animation, and visual experiments', href: '/motion' },
       { label: 'Furreal.aex case study', note: 'Editing and motion work', href: '/work/furreal-aex' },
       { label: 'TikTok', note: '@furreal.aex', href: siteConfig.socials.tiktok, external: true },
       { label: 'Instagram', note: '@furreal.aep', href: siteConfig.socials.instagram, external: true },
@@ -72,7 +73,7 @@ const linkGroups: Array<{ title: string; links: HubLink[] }> = [
 export function LinkHubSection() {
   return (
     <section id="links" className="link-hub-section section-pad" aria-labelledby="link-hub-title">
-      <div className="link-hub-heading">
+      <div className="link-hub-heading" data-reveal-group>
         <div>
           <p className="eyebrow">Explore and connect</p>
           <h1 id="link-hub-title">All my links,<br />in one place.</h1>
@@ -83,7 +84,7 @@ export function LinkHubSection() {
         </div>
       </div>
 
-      <div className="link-hub-grid">
+      <div className="link-hub-grid" data-reveal-group>
         {linkGroups.map((group) => (
           <section className="link-hub-group" aria-labelledby={`links-${group.title.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`} key={group.title}>
             <h3 id={`links-${group.title.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>{group.title}</h3>

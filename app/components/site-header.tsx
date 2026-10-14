@@ -6,6 +6,7 @@ import { Menu, X } from 'lucide-react';
 
 const links = [
   { href: '/#work', label: 'Work' },
+  { href: '/motion', label: 'Motion' },
   { href: '/#about', label: 'About' },
   { href: '/#capabilities', label: 'Capabilities' },
   { href: '/links', label: 'Links' },
@@ -52,7 +53,7 @@ export function SiteHeader() {
         {open ? <X size={21} /> : <Menu size={21} />}
       </button>
       {open && (
-        <nav ref={mobileNavRef} id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">
+        <nav ref={mobileNavRef} id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
           {links.map((link) => <Link key={link.href} href={link.href} onClick={() => setOpen(false)}>{link.label}</Link>)}
           <Link href="/#contact" onClick={() => setOpen(false)}>Let&apos;s work together</Link>
         </nav>

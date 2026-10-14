@@ -19,6 +19,7 @@ The homepage currently presents:
 The current top-level navigation exposes:
 
 - Work;
+- Motion;
 - About;
 - Capabilities;
 - Links;
@@ -154,6 +155,28 @@ The page currently has a strong direct-contact ending:
 
 The separate `/links` route is an editorial link hub that groups the main portfolio, product, game, motion, professional, social, and contact destinations. It is the shareable full-portfolio alternative to a single-brand Linktree page and is available from the site navigation.
 
+The separate `/motion` route is the shareable motion-design archive. It currently leads with the completed Wizeup vertical product promo and uses clearly labelled empty positions for work Moses has not supplied yet. It is linked from both the main navigation and the `/links` hub.
+
+## Motion archive and shared motion baseline
+
+The `/motion` introduction is concise enough to expose the real Wizeup video in the opening viewport. The featured piece uses native, user-controlled inline playback with metadata preloading, a poster, and no autoplay. Its context, contribution, format, and production tools come from the supplied project; the three future-work positions remain explicitly reserved rather than implying completed work.
+
+The archive preserves the existing Runo.dev editorial identity: the same type direction, paper-and-ink palette, generous section rhythm, numbered work, and direct contact ending. The portrait video and its project story extend the work presentation without replacing the site's visual world. `DESIGN.md` remains unchanged.
+
+Shared motion uses bounded editorial and media arrivals, grouped reveals, and faster icon and press feedback. Pending content stays visible before enhancement and when intersection events are missed. Reduced motion removes spatial entrances and delays, and revealed content releases its transform so hover and focus feedback can still work.
+
+Final browser QA on 14 October 2026 is recorded in `.impeccable/review/qa-results.json`:
+
+- 17 route/viewport checks across `/motion`, `/`, `/links`, and `/work/beyond-90` found no horizontal overflow and one H1 per page.
+- `/motion` was checked from 360px to 1920px wide. About 524px of the video is visible at 1440 × 1000 and 307px at 390 × 844 before scrolling.
+- Footer content stays visible in normal desktop/mobile, reduced-motion, JavaScript-disabled, and no-op-observer contexts; the fallback contexts have no arrival animation.
+- Mobile menu focus and Escape restoration, keyboard filtering between Creative (3) and All work (10), and native keyboard video play/pause passed.
+- The browser checks recorded zero console errors. Production build, lint, and TypeScript checks passed; the build generated 19 static pages.
+
+The finish review recommends ship with first-viewport prominence and reveal persistence resolved. Physical-device and assistive-technology testing, plus field Core Web Vitals, are not established by these checks.
+
+## Contact audit considerations
+
 Preserve verified destinations.
 
 Audit:
@@ -183,3 +206,4 @@ These are **questions to verify**, not assumptions that changes are required:
 10. Are social/contact handles current and intentionally different where they differ?
 11. Are project pages represented in metadata/sitemap/canonical setup?
 12. Are project images sized appropriately through Next.js rather than over-fetched?
+13. Does motion remain purposeful, interruptible, and readable before enhancement and under reduced-motion settings?

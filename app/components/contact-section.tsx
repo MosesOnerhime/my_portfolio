@@ -3,7 +3,7 @@ import { siteConfig } from '../data/site';
 
 export function ContactSection({ compact = false }: { compact?: boolean }) {
   return (
-    <section id="contact" className={`contact-section section-pad${compact ? ' contact-compact' : ''}`} aria-labelledby="contact-title">
+    <section id="contact" className={`contact-section section-pad${compact ? ' contact-compact' : ''}`} aria-labelledby="contact-title" data-reveal-group>
       <p className="eyebrow">Have something in mind?</p>
       <h2 id="contact-title">Let&apos;s work together.</h2>
       <p className="contact-copy">If you have a project in mind or simply want to say hello, send me a message. I would be happy to hear from you.</p>

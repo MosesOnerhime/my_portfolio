@@ -77,7 +77,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       <main id="main" className="case-main">
         <article>
-          <header className="case-hero section-pad">
+          <header className="case-hero section-pad" data-entrance="hero-copy">
             <Link className="case-back" href="/#work"><ArrowLeft size={17} aria-hidden="true" /> All work</Link>
             <div className="case-hero-grid">
               <div>
@@ -102,7 +102,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </div>
           </header>
 
-          <div className="case-media-wrap section-pad">
+          <div className="case-media-wrap section-pad" data-entrance="case-media">
             <div className={`case-media visual-${project.visual}`}>
               <ProjectArtwork project={project} priority sizes="(max-width: 760px) 100vw, (max-width: 1600px) 90vw, 1500px" />
               <span className={`status-badge status-${project.status}`}><i aria-hidden="true" /> {project.statusLabel}</span>
@@ -110,7 +110,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
 
           <div className="case-content section-pad">
-            <aside className="case-facts" aria-label="Project details">
+            <aside className="case-facts" aria-label="Project details" data-reveal="up">
               <dl>
                 <div><dt>My role</dt><dd>{project.role}</dd></div>
                 <div><dt>Status</dt><dd>{project.statusLabel}</dd></div>
@@ -139,7 +139,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               ))}
             </aside>
 
-            <div className="case-story">
+            <div className="case-story" data-reveal-group>
               <section aria-labelledby="context-title">
                 <p className="eyebrow">Context</p>
                 <h2 id="context-title">What I worked on</h2>
@@ -186,7 +186,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </div>
           </div>
 
-          <nav className="next-project section-pad" aria-label="Continue to another case study">
+          <nav className="next-project section-pad" aria-label="Continue to another case study" data-reveal-group>
             <p className="eyebrow">Next case study</p>
             <Link href={`/work/${nextProject.slug}`}>
               <span>{nextProject.title}</span><ArrowRight size={32} aria-hidden="true" />

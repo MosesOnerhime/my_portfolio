@@ -14,7 +14,7 @@ const socialLinks = [
 
 export function SiteFooter() {
   return (
-    <footer className="site-footer section-pad">
+    <footer className="site-footer section-pad" data-reveal-group>
       <div>
         <Link className="brand-mark footer-brand" href="/" aria-label="Runo.dev, the portfolio of Moses Onerhime, home">
           <span>Runo</span><span className="brand-dot" aria-hidden="true" /><span>dev</span>

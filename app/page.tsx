@@ -73,7 +73,7 @@ export default function Home() {
 
       <main id="main">
         <section className="hero section-pad" aria-labelledby="hero-title">
-          <div className="hero-copy">
+          <div className="hero-copy" data-entrance="hero-copy">
             <p className="eyebrow"><span className="status-dot" /> {siteConfig.availability}</p>
             <h1 id="hero-title">Moses<span>Onerhime.</span></h1>
             <p className="hero-intro">
@@ -90,7 +90,7 @@ export default function Home() {
             </dl>
           </div>
 
-          <div className="hero-art" aria-label="Selected work from Drixil Group and Beyond 90">
+          <div className="hero-art" aria-label="Selected work from Drixil Group and Beyond 90" data-entrance="hero-art">
             <div className="hero-orbit" aria-hidden="true" />
             <div className="hero-image-card hero-image-main">
               <Image src="/beyond 90/icon v1.0.png" alt="Beyond 90 game icon" fill priority sizes="(max-width: 850px) 88vw, 42vw" />
@@ -103,7 +103,7 @@ export default function Home() {
         </section>
 
         <section id="work" className="work-section section-pad" aria-labelledby="work-title">
-          <div className="section-heading">
+          <div className="section-heading" data-reveal-group>
             <div>
               <p className="eyebrow">Selected work across code and creativity</p>
               <h2 id="work-title">A few projects<br />I am proud of.</h2>
@@ -114,11 +114,11 @@ export default function Home() {
         </section>
 
         <section id="about" className="about-section section-pad" aria-labelledby="about-title">
-          <div className="about-kicker">
+          <div className="about-kicker" data-reveal="up">
             <p className="eyebrow">About Moses</p>
             <span className="about-number" aria-hidden="true">MO</span>
           </div>
-          <div className="about-copy">
+          <div className="about-copy" data-reveal-group>
             <h2 id="about-title">I build software, games, AI systems, motion, and visual stories.</h2>
             <div className="about-columns">
               <p>I am a software, website, and game developer based in Nigeria. I also work in AI and data engineering, using machine and deep learning to build models for specific problems and useful products.</p>
@@ -138,10 +138,10 @@ export default function Home() {
         </section>
 
         <section id="capabilities" className="capabilities-section section-pad" aria-labelledby="capabilities-title">
-          <div className="section-heading compact">
+          <div className="section-heading compact" data-reveal-group>
             <div><p className="eyebrow">What I do</p><h2 id="capabilities-title">What I enjoy<br />working on.</h2></div>
           </div>
-          <div className="capability-grid">
+          <div className="capability-grid" data-reveal-group="scale">
             {capabilities.map(({ icon: Icon, number, title, copy, skills }) => (
               <article className="capability-card" key={number}>
                 <div className="capability-top"><span>{number}</span><Icon size={24} aria-hidden="true" /></div>
@@ -150,7 +150,7 @@ export default function Home() {
             ))}
           </div>
 
-          <section className="current-work-list" aria-label="Projects currently in development">
+          <section className="current-work-list" aria-label="Projects currently in development" data-reveal-group>
             <article id="current-ai-work" className="current-work-feature" aria-labelledby="current-ai-work-title">
               <div className="current-work-heading">
                 <div className="current-work-meta">

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { MotionSystem } from './components/motion-system';
 import { siteConfig } from './data/site';
 import './globals.css';
 
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
+        <MotionSystem />
         {children}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
       </body>
