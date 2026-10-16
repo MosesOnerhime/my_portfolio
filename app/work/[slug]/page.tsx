@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, ArrowRight, ExternalLink, Github } from 'lucide-react';
@@ -185,6 +186,31 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               </section>
             </div>
           </div>
+
+          {project.caseStudyGallery ? (
+            <section className="case-artwork section-pad" aria-labelledby="artwork-title">
+              <header data-reveal="up">
+                <p className="eyebrow">Project artwork</p>
+                <h2 id="artwork-title">{project.caseStudyGallery.title}</h2>
+                <p className="case-body-copy">{project.caseStudyGallery.description}</p>
+              </header>
+              <div className="case-artwork-grid" data-reveal-group>
+                {project.caseStudyGallery.images.map((item) => (
+                  <figure key={item.src}>
+                    <div className="case-artwork-frame">
+                      <Image
+                        src={item.src}
+                        alt={item.alt}
+                        fill
+                        sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1600px) 43vw, 680px"
+                      />
+                    </div>
+                    <figcaption>{item.label}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            </section>
+          ) : null}
 
           <nav className="next-project section-pad" aria-label="Continue to another case study" data-reveal-group>
             <p className="eyebrow">Next case study</p>

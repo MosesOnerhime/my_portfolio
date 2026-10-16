@@ -105,6 +105,12 @@ Improve only where necessary:
 - ensure card metadata does not compete with title;
 - ensure live/source/case-study destinations are understandable.
 
+## Volleyball Rally artwork
+
+The Volleyball Rally card and case-study opening use the updated spike illustration supplied on 16 October 2026. The card keeps the grid's existing image height and centred crop; the case-study opening preserves the full landscape composition. The old icon overlay is no longer displayed on this project.
+
+The case study also includes four additional promotional thumbnails with descriptive alt text and captions. The gallery is two columns above 760px and one column on smaller screens, with responsive, lazy-loaded Next/Image assets and reserved aspect ratios. Its copy explicitly distinguishes illustrations from gameplay screenshots. The five new full-resolution WebP files total 910,950 bytes; source PNGs remain unchanged. See `docs/handoffs/VOLLEYBALL_THUMBNAILS_2026-10-16.md` for asset selection and scoped QA.
+
 ## Current About positioning
 
 The current About copy presents a multidisciplinary identity across:

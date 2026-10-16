@@ -42,6 +42,11 @@ export interface Project {
   imageAlt?: string;
   mark?: string;
   gallery?: ProjectImage[];
+  caseStudyGallery?: {
+    title: string;
+    description: string;
+    images: ProjectImage[];
+  };
   linkGroups?: ProjectLinkGroup[];
   visual: 'drixil' | 'glamour' | 'calvision' | 'beyond' | 'volleyball' | 'forge' | 'learning' | 'trading' | 'dental' | 'editing';
   featured?: boolean;
@@ -143,9 +148,34 @@ export const projects: Project[] = [
     ],
     liveUrl: 'https://www.roblox.com/games/87714615725428/Volleyball-Rally',
     liveLabel: 'Play on Roblox',
-    image: '/volleyball-rally/thumbnail.webp',
-    imageAlt: 'Volleyball Rally players contesting the ball above the net in a bright indoor arena',
-    mark: '/volleyball-rally/icon.webp',
+    image: '/volleyball-rally/spike.webp',
+    imageAlt: 'Promotional artwork of a Volleyball Rally player jumping to spike a blue and yellow ball',
+    caseStudyGallery: {
+      title: 'Volleyball Rally artwork',
+      description: 'A few more thumbnails for the game, from a block at the net to a last-second dive. These are promotional illustrations, not gameplay screenshots.',
+      images: [
+        {
+          src: '/volleyball-rally/block.webp',
+          alt: 'A blue-team player rising above the net to block a red-team opponent in Volleyball Rally promotional artwork',
+          label: 'At the net',
+        },
+        {
+          src: '/volleyball-rally/team.webp',
+          alt: 'Three blue-team Volleyball Rally players celebrating together on an indoor court',
+          label: 'A point worth celebrating',
+        },
+        {
+          src: '/volleyball-rally/dive.webp',
+          alt: 'A Volleyball Rally player diving across the court to reach the ball while teammates and opponents watch',
+          label: 'Keeping the rally alive',
+        },
+        {
+          src: '/volleyball-rally/receive.webp',
+          alt: 'A court-level first-person illustration of a Volleyball Rally player receiving the ball over the net',
+          label: 'From the court',
+        },
+      ],
+    },
     linkGroups: [{ label: 'Drixil Interactive', links: drixilInteractiveLinks }],
     visual: 'volleyball',
     featured: true,
