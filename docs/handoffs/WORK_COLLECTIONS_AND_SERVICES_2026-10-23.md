@@ -1,5 +1,7 @@
 # Work collections and service pricing
 
+Release follow-up: the direct CLI release below is historical. Moses subsequently requested GitHub-based delivery. All scoped changes, plus the BTI case study and Approovia v3 update, were committed and pushed as `645cc70b4b0fa069374171b610599412eb0565e9`; its automatic GitHub-source Vercel production deployment is Ready. See `GITHUB_DELIVERY_BTI_APPROOVIA_2026-10-23.md` for the source SHA, deployment receipt, and live checks. GitHub main is the normal production source of truth.
+
 ## Request and boundaries
 
 Moses asked for work organized into discipline folders, public service charges based on his existing motion/web general invoices, new editing packages, organized reusable invoices in this repository, and deployment. He confirmed that public editing fees cover editing only; posting on Furreal accounts is quoted separately.

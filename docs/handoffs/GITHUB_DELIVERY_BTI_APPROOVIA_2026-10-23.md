@@ -48,6 +48,12 @@ No DESIGN.md or design-sidecar refresh is authorized or required by this extensi
 
 Added a dated BTI/v3 follow-up above the earlier collection baseline in `docs/ui/CURRENT_SITE_BASELINE.md`, preserving the 14-record/ten-case and earlier 30-second film entries as historical evidence. The current handoff records the completed scoped finish review, source/design comparison, provenance, and documentation state. No UI, media, source-repository, pricing/PDF, or unrelated resume/skill file was changed by this documentation pass.
 
-## Release receipt pending
+## Verified GitHub release receipt
 
-Scoped source commit/push, GitHub-triggered Vercel deployment, and live verification remain pending. The previous collections/services changes and five public invoice guides are included in this release, not left solely in the direct deployment.
+Committed all 53 scoped implementation, content, media, invoice, and documentation paths as `645cc70b4b0fa069374171b610599412eb0565e9` (`feat: organize portfolio work, publish rates, and refresh BTI and motion showcases`) and pushed normally to `origin/main`. A separate `git ls-remote` returned the identical SHA. The previous collections/services work and all five public invoice guides are now in GitHub, not solely in the earlier direct deployment. Unrelated untracked skill packages, resume documentation/outputs, and temporary files remain untouched and uncommitted.
+
+Vercel automatically created production deployment `dpl_AJmbtPg5cS4o8qWG2gLSSz6fkQLn`, `my-portfolio-ezpxwixbl-moses-onerhimes-projects.vercel.app`. Its authenticated API record reports `READY`, `target: production`, `source: git`, and `gitSource` type `github`, ref `main`, SHA `645cc70b4b0fa069374171b610599412eb0565e9`. Both `www.mosesonerhime.com` and `mosesonerhime.com` are assigned to it. No CLI deployment, deploy-hook trigger, repository reconnection, plan change, force push, or new hosting project was used for this correction.
+
+Unauthenticated checks on `https://www.mosesonerhime.com` passed all 22 routes, including the new BTI case study, all eleven cases, collection routes, services, motion, link hub, sitemap, and robots. All five live PDF downloads match local files by SHA-256. The new v3 MP4 and English WebVTT also match their local SHA-256 hashes; a video byte-range request returned 206 and the exact requested 1024 bytes. A 390px live browser check passed collection image loading, navigation, game-card counts, service downloads, keyboard disclosure, no horizontal overflow, and no page errors.
+
+This documentation-only receipt follows the verified application release; it changes no website asset, application code, or deployment configuration. The normal GitHub-first workflow is now recorded in root AGENTS.md and README.
