@@ -9,6 +9,7 @@ export type MotionWork = {
   orientation: 'portrait' | 'landscape';
   videoSrc: string;
   posterSrc: string;
+  captionsSrc?: string;
 };
 
 export const motionWorks: MotionWork[] = [
@@ -30,13 +31,14 @@ export const motionWorks: MotionWork[] = [
     title: 'Approovia Workspace Manager',
     label: 'Product motion · Software showcase',
     description:
-      'A 30-second showcase of Approovia Workspace Manager. The film moves from scattered work to one connected process, using animated product interfaces to show form creation, workflow building, and staged approvals.',
-    contribution: 'Motion design, animation, and editing',
-    format: '30 seconds · 16:9 · Music and sound effects',
+      'A narrated showcase of Approovia Workspace Manager, moving from scattered work to one connected process. Animated product interfaces explain forms, approval workflows, memos, signatures, document filing, RAG search, and case files.',
+    contribution: 'Motion design, animation, editing, and sound design',
+    format: '91 seconds · 16:9 · Voiceover, music, and sound effects',
     tools: ['HyperFrames', 'HTML/CSS', 'GSAP'],
     orientation: 'landscape',
-    videoSrc: '/motion/approovia-workspace.mp4',
-    posterSrc: '/motion/approovia-workspace-poster.webp',
+    videoSrc: '/motion/approovia-workspace-v3.mp4',
+    posterSrc: '/motion/approovia-workspace-v3-poster.webp',
+    captionsSrc: '/motion/approovia-workspace-v3.en.vtt',
   },
 ];
 

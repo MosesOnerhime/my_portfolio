@@ -9,6 +9,7 @@ import { SiteFooter } from '../../components/site-footer';
 import { SiteHeader } from '../../components/site-header';
 import { getProject, projects } from '../../data/projects';
 import { siteConfig } from '../../data/site';
+import { collectionHref, projectCollection } from '../../data/collections';
 
 type ProjectPageProps = {
   params: Promise<{ slug: string }>;
@@ -55,6 +56,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   const currentIndex = projects.findIndex((item) => item.slug === project.slug);
   const nextProject = projects[(currentIndex + 1) % projects.length];
+  const collection = projectCollection(project.slug);
   const relatedUrls = [
     ...(project.liveUrl ? [project.liveUrl] : []),
     ...(project.codeUrl ? [project.codeUrl] : []),
@@ -79,7 +81,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <main id="main" className="case-main">
         <article>
           <header className="case-hero section-pad" data-entrance="hero-copy">
-            <Link className="case-back" href="/#work"><ArrowLeft size={17} aria-hidden="true" /> All work</Link>
+            <Link className="case-back" href={collection ? collectionHref(collection) : '/work'}><ArrowLeft size={17} aria-hidden="true" /> {collection ? `Back to ${collection.title.toLowerCase()}` : 'All collections'}</Link>
             <div className="case-hero-grid">
               <div>
                 <p className="eyebrow">{project.label}</p>

@@ -1,47 +1,13 @@
-'use client';
-
 import Link from 'next/link';
-import { useState } from 'react';
 import { ArrowUpRight, ExternalLink, Github } from 'lucide-react';
-import { ProjectCategory, projects } from '../data/projects';
+import { Project, projects } from '../data/projects';
 import { ProjectArtwork } from './project-artwork';
 
-const filters: Array<{ value: 'all' | ProjectCategory; label: string }> = [
-  { value: 'all', label: 'All work' },
-  { value: 'web', label: 'Web' },
-  { value: 'product', label: 'Products' },
-  { value: 'creative', label: 'Creative' },
-];
-
-export function ProjectShowcase() {
-  const [activeFilter, setActiveFilter] = useState<'all' | ProjectCategory>('all');
-  const visibleProjects = activeFilter === 'all'
-    ? projects
-    : projects.filter((project) => project.category === activeFilter);
-
+export function ProjectShowcase({ items = projects }: { items?: Project[] }) {
   return (
     <>
-      <div className="project-filter-row" data-reveal="up">
-        <div className="project-toolbar" role="group" aria-label="Filter projects by type">
-          {filters.map((filter) => (
-            <button
-              key={filter.value}
-              type="button"
-              className={activeFilter === filter.value ? 'active' : ''}
-              aria-pressed={activeFilter === filter.value}
-              onClick={() => setActiveFilter(filter.value)}
-            >
-              {filter.label}
-            </button>
-          ))}
-        </div>
-        <p className="project-results" role="status" aria-live="polite">
-          {visibleProjects.length} {visibleProjects.length === 1 ? 'project' : 'projects'}
-        </p>
-      </div>
-
       <div className="project-grid" data-reveal-group="scale">
-        {visibleProjects.map((project, index) => (
+        {items.map((project, index) => (
           <article className={`project-card ${project.featured ? 'project-featured' : ''}`} key={project.slug}>
             <div className={`project-visual visual-${project.visual}`}>
               <ProjectArtwork project={project} />

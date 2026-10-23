@@ -29,7 +29,8 @@ const linkGroups: Array<{ title: string; links: HubLink[] }> = [
   {
     title: 'Portfolio and products',
     links: [
-      { label: 'Selected work', note: 'Browse every portfolio case study', href: '/#work' },
+      { label: 'Work collections', note: 'Games, websites, software, motion, and editing', href: '/work' },
+      { label: 'Services and rates', note: 'Starting fees, scopes, and general invoices', href: '/services' },
       projectLink('drixil-group', 'Drixil Group website'),
       projectLink('forge', 'Fitness tracking product'),
       projectLink('calvision', 'African food recognition and nutrition'),

@@ -1,0 +1,81 @@
+{
+  "edition": "2026-10-23",
+  "currencyNote": "NGN and USD are separate market prices, not exchange-rate conversions. Final scope and fees are confirmed in a written quote.",
+  "motion": {
+    "title": "Motion design",
+    "basis": "Existing general invoice rates",
+    "description": "15-30 second product launches, app showcases, and animated interface films.",
+    "items": [
+      { "title": "Startup product showcase", "scope": "One 15-30 second film in one agreed format.", "ngn": 150000, "ngnMax": 250000, "usd": 500, "usdMax": 900 },
+      { "title": "Established company showcase", "scope": "A product or brand story with a more involved creative scope.", "ngn": 250000, "ngnMax": 500000, "usd": 800, "usdMax": 1500 },
+      { "title": "Campaign / multiple deliverables", "scope": "A coordinated set of films or campaign assets, scoped together.", "ngn": null, "usd": 2000, "usdMax": 5000, "plus": true }
+    ],
+    "standard": { "ngn": 250000, "usd": 750 },
+    "includes": "Creative direction, animation, timing, sound design, one finished MP4 in one agreed format, and two consolidated revision rounds.",
+    "excludes": "Additional formats, voiceover, bespoke illustration or 3D, further revisions, rush work, and editable source files are quoted separately.",
+    "payment": "50% upfront and 50% before final delivery."
+  },
+  "editing": {
+    "title": "Video editing",
+    "basis": "New indicative starting rates",
+    "description": "Editing supplied footage for music, brands, personal projects, and social content. No posting is included.",
+    "items": [
+      { "title": "Personal / cinematic edit", "scope": "One 15-30 second edit from up to 5 minutes of supplied footage; pacing, colour, transitions, and sound.", "ngn": 35000, "usd": 75 },
+      { "title": "Song promotion edit", "scope": "One 15-45 second music-led edit using supplied, cleared audio and footage; beat-led cuts and text treatment.", "ngn": 75000, "usd": 150 },
+      { "title": "Brand collaboration edit", "scope": "One 15-60 second branded video from supplied footage, with captions, logo treatment, colour, and sound.", "ngn": 150000, "usd": 300 },
+      { "title": "Social / talking-head clip", "scope": "One clip up to 60 seconds from up to 10 minutes of footage, with cleanup, captions, and light B-roll.", "ngn": 50000, "usd": 100 },
+      { "title": "Long-form / YouTube edit", "scope": "One finished video up to 10 minutes from up to 30 minutes of supplied footage; editing, colour, and audio cleanup.", "ngn": 150000, "usd": 300 }
+    ],
+    "includes": "One finished MP4 in one agreed aspect ratio and two consolidated revision rounds within the agreed brief. Delivery timing is agreed before work starts.",
+    "excludes": "Filming, advanced VFX/3D, extra versions, source files, rush work, and additional revisions are separate. You supply footage, music, brand assets, and any needed permissions.",
+    "posting": "Posting on Furreal accounts, paid-ad usage, licensing, exclusivity, and campaign management are quoted separately. No views, engagement, or campaign results are guaranteed.",
+    "payment": "Proposed editing terms: 50% upfront and 50% before final delivery. The issued project quote confirms the final terms."
+  },
+  "web": {
+    "title": "Website development",
+    "basis": "Existing general web-development invoice rates",
+    "description": "One-off starting fees for a defined website scope. These are alternatives, not charges to add together.",
+    "items": [
+      { "title": "Landing / campaign page", "scope": "One campaign, enquiry CTA and responsive sections.", "ngn": 350000, "usd": null },
+      { "title": "Personal portfolio / CV website", "scope": "Up to five pages for work, profile and enquiries.", "ngn": 350000, "usd": null },
+      { "title": "Small business / brochure site", "scope": "Up to five public pages, contact and basic search setup.", "ngn": 450000, "usd": null },
+      { "title": "Corporate / professional services", "scope": "Up to ten pages, service detail and structured enquiries.", "ngn": 650000, "usd": null },
+      { "title": "Beauty / salon / wellness website", "scope": "Services, gallery, location and WhatsApp enquiries.", "ngn": 450000, "usd": null },
+      { "title": "Restaurant / food business", "scope": "Menu and reservation link; no custom ordering engine.", "ngn": 450000, "usd": null },
+      { "title": "Event / wedding / conference", "scope": "Event information, schedule and registration handoff.", "ngn": 400000, "usd": null },
+      { "title": "NGO / charity / community", "scope": "Mission, programmes, updates and donation handoff.", "ngn": 500000, "usd": null },
+      { "title": "Religious / ministry website", "scope": "Programmes, media links and contact; no media hosting.", "ngn": 450000, "usd": null },
+      { "title": "School / academy website", "scope": "Public admissions information; no student portal.", "ngn": 600000, "usd": null },
+      { "title": "Real estate listing website", "scope": "Editable property listings and agent enquiries.", "ngn": 750000, "usd": null },
+      { "title": "Clinic / healthcare information", "scope": "Public services and appointment handoff; no patient data.", "ngn": 650000, "usd": null },
+      { "title": "Hotel / hospitality website", "scope": "Rooms, offers and an existing booking-provider link.", "ngn": 600000, "usd": null },
+      { "title": "Blog / publication / news CMS", "scope": "Editable articles, categories and publishing access.", "ngn": 650000, "usd": null },
+      { "title": "Training / course campaign + CMS", "scope": "One programme, admin editing, images and registration.", "ngn": 650000, "usd": null },
+      { "title": "Single-vendor online store", "scope": "Up to 25 initial products, orders and one payment gateway.", "ngn": 900000, "usd": null },
+      { "title": "Digital downloads / product store", "scope": "Catalogue, one gateway and protected file delivery.", "ngn": 950000, "usd": null },
+      { "title": "Appointment / booking system", "scope": "One business, availability and booking administration.", "ngn": 1000000, "usd": null },
+      { "title": "Restaurant ordering system", "scope": "Menu, cart, order workflow and delivery-zone settings.", "ngn": 1100000, "usd": null },
+      { "title": "Hotel reservation platform", "scope": "Room inventory, dates, booking workflow and admin.", "ngn": 1400000, "usd": null },
+      { "title": "Membership / subscription portal", "scope": "User accounts, access levels and one recurring gateway.", "ngn": 1200000, "usd": null },
+      { "title": "Online learning / LMS", "scope": "Courses, lessons, enrolment and learner accounts.", "ngn": 1500000, "usd": null },
+      { "title": "Directory / classifieds website", "scope": "Listings, search, owner submission and moderation.", "ngn": 1200000, "usd": null },
+      { "title": "Job board / recruitment portal", "scope": "Job listings, employer access and applications.", "ngn": 1400000, "usd": null },
+      { "title": "Client portal / internal dashboard", "scope": "One business workflow, role access and reporting.", "ngn": 1300000, "usd": null },
+      { "title": "SaaS / custom web app MVP", "scope": "One core workflow, authentication and admin tools.", "ngn": 2000000, "usd": null },
+      { "title": "Multi-vendor marketplace", "scope": "Seller access, listings and orders; payouts scoped first.", "ngn": 2500000, "usd": null },
+      { "title": "Logistics / delivery portal", "scope": "Shipment requests, status tracking and operations admin.", "ngn": 1800000, "usd": null },
+      { "title": "Crowdfunding / fundraising platform", "scope": "Campaigns, payment handoff and moderation workflow.", "ngn": 2000000, "usd": null },
+      { "title": "Fintech / regulated-data platform", "scope": "Paid discovery and architecture only; build quoted after.", "ngn": 500000, "usd": null }
+    ],
+    "care": [
+      { "title": "Essential care", "scope": "Up to 2 hours a month: small edits, health checks and updates.", "ngn": 30000, "usd": null },
+      { "title": "Business care", "scope": "Up to 4 hours a month: edits, updates, checks and backup review.", "ngn": 60000, "usd": null },
+      { "title": "Commerce / application care", "scope": "Up to 8 hours a month: workflow checks and technical maintenance.", "ngn": 120000, "usd": null }
+    ],
+    "includes": "Responsive design, agreed pages/workflows, basic metadata and search setup, testing, deployment assistance, Git source handover, one admin handover session, and two consolidated revision rounds. Includes 30 days of fixes for defects in the agreed functionality after launch.",
+    "excludes": "Domain, hosting, database, email/SMS, plugins, stock licences, gateway fees and usage overages are separate provider costs. New features, redesigns, third-party outages and unlimited content changes are not included.",
+    "payment": "One full payment when the agreed website is complete, tested and approved by the client. No deposit or development instalments. Source handover follows settlement. Quotes are valid for 14 days.",
+    "careTerms": "Optional care starts at handover. Month one is included in the completion payment if selected; later months are billed in advance. Hours do not roll over. New features, redesigns, bulk uploads and 24/7 support are excluded. Extra work starts at NGN 15,000/hour with approval. No automatic charge is authorized.",
+    "additions": "Extra static page from NGN 30,000; extra revision round from NGN 25,000; standard payment-gateway integration from NGN 100,000. Migration, copy, SEO campaigns, multilingual content and rush delivery are quoted separately."
+  }
+}

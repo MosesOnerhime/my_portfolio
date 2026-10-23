@@ -2,6 +2,34 @@
 
 This document records the publicly visible structure observed from the current portfolio. Treat the repository itself as the final source of truth.
 
+## Current follow-up: BTI and Approovia v3, 23 October 2026
+
+The website collection now contains three projects: Drixil Group, GLAMOURSPHAIR, and HADI Place / BTI. The new `/work/bti-hadi-place` case study brings the crawlable case-study set to eleven while preserving the existing project priority. Counts continue to derive from `app/data/collections.ts`: eleven projects, two motion films, and two labelled works in development make 15 selected-work records. The homepage describes the live-status count as `Live projects`; BTI remains explicitly labelled `Live demo` in its card and case study.
+
+The BTI case study shows the actual public training page and HADI Place homepage, with verified links to `https://hadispa.vercel.app/bti` and the public homepage. Its copy explains the website, owner-managed publishing studio, reusable private templates, promotion registration, revision checks, and database-enforced editing permissions. Custom-domain setup, production email verification, and client handover remain separate work; payment confirmation remains with the programme owner. No private code destination, admin screenshot, student record, or client payment data is published.
+
+The second motion piece now uses the narrated Approovia v3 film rather than the earlier 30-second version. Its 90.602-second web copy is displayed as 91 seconds, at 1280 × 720 and 60fps, with voiceover, music, sound effects, and 23 optional English caption cues. The 8,617,503-byte fast-start MP4 and its actual 9.0-second poster frame are referenced by the shared motion and collection data. Playback remains native, inline, user-controlled, and below-fold `preload="none"`; Wizeup retains first position. The earlier Approovia media URLs remain compatibility assets.
+
+This is an ordinary content and media extension of the existing paper/ink/slate identity, Segoe UI typography, rounded project imagery, collection navigation, case-study structure, and responsive motion layouts. The BTI case art reserves the screenshot's 1440:1000 aspect ratio and contains the full image. The two public-page WebPs and v3 poster each carry an origin sidecar; no new generated artwork is introduced. The documented visual direction still matches this scope, so `DESIGN.md` is unchanged. Its pre-existing narrative format and absent `.impeccable/design.json` sidecar are recorded rather than repaired as part of this extension.
+
+The current QA records are `.impeccable/review/collections-services-qa.json` and `bti-motion-qa.json`: the collection/services suite passed 56 route/viewport combinations and the new scope passed 32 layout checks, both across eight widths from 360px to 1920px. Coverage includes eleven case studies, five public PDF downloads, whole-card and return links, keyboard/focus behavior, reduced motion, JavaScript-disabled navigation/disclosures, BTI metadata/social image/sitemap presence, video metadata, and all 23 caption cues. No page errors were recorded. Lint, TypeScript, whitespace checks, and the production build passed with 27 routes. Fourteen final 1440px/390px captures were reviewed against the direction contract; the new-scope detector returned `[]` once. These checks do not establish physical-device or assistive-technology coverage or field Core Web Vitals.
+
+The independent finish review identified one product-evidence documentation issue: stale Approovia source information and missing BTI evidence. After the scoped PRODUCT.md correction, the same reviewer marked the issue resolved with a `SHIP` disposition for that fix. This documentation follow-up reconciles the baseline and handoff; it does not imply production delivery. See `docs/handoffs/GITHUB_DELIVERY_BTI_APPROOVIA_2026-10-23.md` for the GitHub-first release and deployment receipt.
+
+## Earlier collection structure: 23 October 2026
+
+The homepage work section and `/work` now present five image-led collection folders: game development, website development, software and AI, motion design, and video editing. The folders replace the earlier homepage project filters. Four collection pages live under `/work/collections/{games,websites,software-ai,editing}`; the motion folder opens the existing `/motion` archive, and `/work/collections/motion` redirects there. All ten original `/work/[slug]` case studies remain available, with collection-aware return links and clickable card surfaces.
+
+`app/data/collections.ts` owns collection membership, covers, destinations, and derived counts. The current set is two game projects, two website projects, five software/AI projects plus two labelled works in development, two motion films, and one editing collection. The 14 selected-work records therefore include unfinished work with its status visible. The two longer development/concept descriptions now live in the software/AI collection and retain their limits and planned status.
+
+`/services` is linked from the main navigation, homepage work section, capabilities, and `/links`. Its opening shows numeric starting fees derived from `invoices/rates.json`; the detailed page covers motion, editing, website builds and optional care, with games/AI/custom software quoted from a brief. Native disclosures expose the longer web scopes without client-side JavaScript. Five public-safe PDF guides include reusable, unissued invoice templates. Editing fees cover editing only; posting and usage arrangements are separate. Motion/editing 50/50 terms remain distinct from web payment after completion, testing, and client approval.
+
+The existing paper-and-ink palette, slate accent, typography, hero composition, real project imagery, motion archive, and contact paths remain the design authority. All five collection covers reuse existing assets listed in the collection data; no shipping raster imagery was generated. `DESIGN.md` remains unchanged.
+
+The production-server QA record is `.impeccable/review/collections-services-qa.json`: 56 route/viewport checks from 360px to 1920px passed, alongside keyboard navigation, native disclosures, mobile menu focus/Escape behavior, reduced motion, JavaScript-disabled collection/disclosure behavior, ten case-study routes, and five PDF downloads. Build, lint, and TypeScript passed with 26 generated routes. These checks do not establish physical-device or assistive-technology coverage or field Core Web Vitals. See `docs/handoffs/WORK_COLLECTIONS_AND_SERVICES_2026-10-23.md` for pricing provenance, scoped finish-review outcome, and deployment state.
+
+The sections below retain the earlier baseline and audit questions as historical context. Their filter labels, earlier navigation, work counts, and dated QA measurements describe the pre-collection structure where they differ from this update.
+
 ## Current public positioning
 
 The homepage currently presents:

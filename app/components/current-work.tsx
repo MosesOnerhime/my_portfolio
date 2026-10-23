@@ -1,0 +1,5 @@
+import { currentWork } from '../data/current-work';
+
+export function CurrentWork() {
+  return <section id="in-progress" className="current-work-list current-work-collection section-pad" aria-labelledby="current-work-title" data-reveal-group><h2 id="current-work-title">Also in progress.</h2>{currentWork.map((work) => <article key={work.id} id={work.id} className="current-work-feature" aria-labelledby={`${work.id}-title`}><div className="current-work-heading"><div className="current-work-meta"><span>{work.status}</span></div><h3 id={`${work.id}-title`}>{work.title}</h3><p>{work.summary}</p></div><div className="current-work-details">{work.paragraphs.map((text) => <p key={text}>{text}</p>)}<ol className="current-work-flow" aria-label={`Planned workflow for ${work.title}`}>{work.steps.map(([title, text], index) => <li key={title}><span>{String(index + 1).padStart(2, '0')}</span><strong>{title}</strong><small>{text}</small></li>)}</ol><p className="current-work-note">{work.note}</p></div></article>)}</section>;
+}

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -10,10 +11,11 @@ import {
   Workflow,
 } from 'lucide-react';
 import { ContactSection } from './components/contact-section';
-import { ProjectShowcase } from './components/project-showcase';
+import { WorkCollections } from './components/work-collections';
 import { SiteFooter } from './components/site-footer';
 import { SiteHeader } from './components/site-header';
-import { liveProjects, projects } from './data/projects';
+import { liveProjects } from './data/projects';
+import { totalWorkCount } from './data/collections';
 import { siteConfig } from './data/site';
 
 const capabilities = [
@@ -62,7 +64,7 @@ const capabilities = [
 ];
 
 export default function Home() {
-  const selectedWorkCount = String(projects.length).padStart(2, '0');
+  const selectedWorkCount = String(totalWorkCount).padStart(2, '0');
   const liveLaunchCount = String(liveProjects.length).padStart(2, '0');
   const disciplineCount = String(capabilities.length).padStart(2, '0');
 
@@ -85,7 +87,7 @@ export default function Home() {
             </div>
             <dl className="hero-stats">
               <div><dt>{selectedWorkCount}</dt><dd>Selected works</dd></div>
-              <div><dt>{liveLaunchCount}</dt><dd>Live launches</dd></div>
+              <div><dt>{liveLaunchCount}</dt><dd>Live projects</dd></div>
               <div><dt>{disciplineCount}</dt><dd>Main disciplines</dd></div>
             </dl>
           </div>
@@ -105,12 +107,12 @@ export default function Home() {
         <section id="work" className="work-section section-pad" aria-labelledby="work-title">
           <div className="section-heading" data-reveal-group>
             <div>
-              <p className="eyebrow">Selected work across code and creativity</p>
-              <h2 id="work-title">A few projects<br />I am proud of.</h2>
+              <h2 id="work-title">My work,<br />by discipline.</h2>
             </div>
-            <p>This collection includes websites, AI tools, games, mobile apps, and creative work that I have built so far.</p>
+            <p>Choose a folder to see the projects, the process, and what I worked on.</p>
           </div>
-          <ProjectShowcase />
+          <WorkCollections />
+          <div className="work-services-link"><p>Have something you want to make?</p><Link href="/services">Services & starting rates <ArrowUpRight size={18} aria-hidden="true" /></Link></div>
         </section>
 
         <section id="about" className="about-section section-pad" aria-labelledby="about-title">
@@ -150,66 +152,7 @@ export default function Home() {
             ))}
           </div>
 
-          <section className="current-work-list" aria-label="Projects currently in development" data-reveal-group>
-            <article id="current-ai-work" className="current-work-feature" aria-labelledby="current-ai-work-title">
-              <div className="current-work-heading">
-                <div className="current-work-meta">
-                  <p className="eyebrow">Current AI work</p>
-                  <span>In development</span>
-                </div>
-                <h3 id="current-ai-work-title">An AI coding harness for building complete applications.</h3>
-                <p>
-                  I am currently working with Approovia Limited on an AI coding harness in the same broad category as Lovable and Cursor. It is being designed to turn a simple prompt into a tested, deployed application through a guided conversation about the product&apos;s requirements.
-                </p>
-              </div>
-
-              <div className="current-work-details">
-                <p>
-                  For example, a hospital could ask it to create a hospital management system. The harness would ask which features and specifications are needed. If the user chooses to skip that process, it could instead work from information found in the hospital&apos;s website or documents.
-                </p>
-                <p>
-                  From that information, the harness would define the business logic and specifications, then direct a coding agent to build the application. A structured set of Markdown files would guide the agent through consistent development practices, security considerations, and testing.
-                </p>
-                <ol className="current-work-flow" aria-label="Planned AI coding harness workflow">
-                  <li><span>01</span><strong>Understand</strong><small>Start with a prompt, questions, or existing documents.</small></li>
-                  <li><span>02</span><strong>Specify</strong><small>Turn the requirements into business logic and application specifications.</small></li>
-                  <li><span>03</span><strong>Build and test</strong><small>Guide a coding agent with standardized Markdown processes.</small></li>
-                  <li><span>04</span><strong>Deploy</strong><small>Release through Approovia&apos;s cloud service after testing.</small></li>
-                </ol>
-                <p className="current-work-note">
-                  The cloud service is being developed from scratch on rented data-centre infrastructure. The harness will begin as a web application, with desktop and mobile versions planned for later.
-                </p>
-              </div>
-            </article>
-
-            <article id="current-safety-work" className="current-work-feature" aria-labelledby="current-safety-work-title">
-              <div className="current-work-heading">
-                <div className="current-work-meta">
-                  <p className="eyebrow">Personal safety system</p>
-                  <span>Concept in development</span>
-                </div>
-                <h3 id="current-safety-work-title">Connecting software, machine learning, and a discreet wearable.</h3>
-                <p>
-                  I am working on a software and hardware concept intended to support people in dangerous situations. The software would explore machine learning signals that could indicate potential harm in an environment, while a wearable such as a ring, necklace, or bracelet would give someone a manual way to trigger an alert.
-                </p>
-              </div>
-
-              <div className="current-work-details">
-                <p>
-                  The planned alert flow would notify selected emergency contacts or emergency services and share the person&apos;s location. The tracker is intended to help locate someone during an emergency, including a kidnapping. These are planned capabilities, not a claim that the system is currently operational or a replacement for emergency services.
-                </p>
-                <ol className="current-work-flow" aria-label="Planned personal safety system workflow">
-                  <li><span>01</span><strong>Monitor</strong><small>Explore environmental signals that may point to potential danger.</small></li>
-                  <li><span>02</span><strong>Trigger</strong><small>Provide a discreet manual alert through a connected wearable.</small></li>
-                  <li><span>03</span><strong>Notify</strong><small>Contact selected people or services when an alert is raised.</small></li>
-                  <li><span>04</span><strong>Locate</strong><small>Share tracking information to support an emergency response.</small></li>
-                </ol>
-                <p className="current-work-note">
-                  The final wearable form and operating model are still being explored. I am presenting this as work in development, not as an operational safety service.
-                </p>
-              </div>
-            </article>
-          </section>
+          <div className="capabilities-more"><Link href="/work/collections/software-ai#in-progress">See what I am working on now <ArrowUpRight size={18} aria-hidden="true" /></Link><Link href="/services">Services & rates <ArrowUpRight size={18} aria-hidden="true" /></Link></div>
         </section>
 
         <ContactSection />

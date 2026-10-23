@@ -1,0 +1,15 @@
+.git
+.archive
+.env*
+.next
+*.tsbuildinfo
+.agents
+.impeccable
+docs
+output
+tmp
+invoices/tools
+invoices/README.md
+invoices/PROVENANCE.md
+invoices/templates
+node_modules

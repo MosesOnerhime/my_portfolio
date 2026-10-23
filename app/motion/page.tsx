@@ -63,6 +63,7 @@ export default function MotionPage() {
                 poster={work.posterSrc}
               >
                 <source src={work.videoSrc} type="video/mp4" />
+                {work.captionsSrc && <track kind="captions" src={work.captionsSrc} srcLang="en" label="English" />}
                 Your browser does not support embedded video. <a href={work.videoSrc}>Open {work.title}</a>.
               </video>
             </div>

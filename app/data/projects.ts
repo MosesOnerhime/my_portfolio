@@ -48,7 +48,7 @@ export interface Project {
     images: ProjectImage[];
   };
   linkGroups?: ProjectLinkGroup[];
-  visual: 'drixil' | 'glamour' | 'calvision' | 'beyond' | 'volleyball' | 'forge' | 'learning' | 'trading' | 'dental' | 'editing';
+  visual: 'drixil' | 'glamour' | 'bti' | 'calvision' | 'beyond' | 'volleyball' | 'forge' | 'learning' | 'trading' | 'dental' | 'editing';
   featured?: boolean;
 }
 
@@ -61,6 +61,41 @@ const drixilInteractiveLinks: ProjectLink[] = [
 ];
 
 // The source order is the homepage priority order and is reused by case-study navigation.
+const btiProject: Project = {
+    slug: 'bti-hadi-place',
+    title: 'HADI Place / BTI',
+    label: 'Website and publishing studio',
+    summary: 'A beauty and wellness website with an owner-managed publishing studio, including BTI training and registration pages.',
+    description: 'I built HADI Place\'s website and the studio behind it. The project started with a BTI training page and grew into an editable homepage with separate promotions, reusable layouts, and a registration page for each programme.',
+    challenge: 'The owner needed to update the website and publish new promotions without asking a developer to redeploy it. Each programme also needed its own dates, venue, contact, and payment instructions, without carrying those details over from an unrelated event.',
+    approach: 'I used Next.js and Supabase to separate private drafts, templates, and publication history from public pages. Admins can preview changes, publish a complete revision, and archive or restore a promotion. Database permissions protect editing, and revision checks prevent one editor from silently overwriting another.',
+    role: 'Full-stack developer and designer',
+    year: '2026',
+    status: 'live',
+    statusLabel: 'Live demo',
+    statusNote: 'The public demonstration is available for client review. The website, promotion studio, and BTI pages are implemented. Custom-domain setup, production email verification, and final client handover remain separate work. Registration hands payment confirmation to the programme owner; the website does not verify payments automatically.',
+    category: 'web',
+    tags: ['Next.js', 'TypeScript', 'Supabase', 'Postgres RLS', 'Content management'],
+    highlights: [
+      'Designed and built the responsive HADI Place homepage, BTI programme page, and per-promotion registration flow',
+      'Created an owner studio for editing content, uploading images, and reusing private templates',
+      'Built draft, preview, publication history, and archive/restore flows with per-page revision checks',
+      'Protected editing with authenticated admin membership and database-enforced permissions',
+      'Kept event-specific dates, contacts, venue, and payment details separate when copying a promotion',
+    ],
+    liveUrl: 'https://hadispa.vercel.app/bti',
+    liveLabel: 'Visit BTI demo',
+    linkGroups: [{ label: 'Project website', links: [{ label: 'HADI Place homepage', url: 'https://hadispa.vercel.app/' }] }],
+    image: '/bti/training.webp',
+    imageAlt: 'Public BTI training page on the HADI Place website',
+    caseStudyGallery: {
+      title: 'The wider HADI Place website',
+      description: 'The editable homepage introduces HADI Place and links to its published programmes. BTI remains a separate training page within the same website.',
+      images: [{ src: '/bti/homepage.webp', alt: 'HADI Place public homepage with its beauty and wellness services', label: 'HADI Place homepage' }],
+    },
+    visual: 'bti',
+  };
+
 export const projects: Project[] = [
   {
     slug: 'drixil-group',
@@ -272,6 +307,7 @@ export const projects: Project[] = [
     visual: 'glamour',
     featured: true,
   },
+  btiProject,
   {
     slug: 'calvision',
     title: 'CalVision',

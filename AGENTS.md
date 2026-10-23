@@ -198,3 +198,11 @@ Before considering a site-wide refinement complete:
 10. review final git diff.
 
 Do not commit or push unless explicitly requested.
+
+## Production delivery
+
+- The existing Vercel project is GitHub-connected to `MosesOnerhime/my_portfolio`; `main` is its production branch.
+- GitHub is the source of truth for normal production releases. With commit/push authorization, commit the reviewed in-scope files, push to `origin/main`, and verify that Vercel's GitHub-triggered deployment is Ready for that exact commit.
+- Do not bypass that workflow with a direct CLI production upload of an uncommitted worktree unless Moses explicitly requests a direct deployment.
+- If deployment is requested without commit/push authorization, explain the required Git step and request the missing authorization. Do not silently substitute a direct upload.
+- Never include environment files, private client records, local QA captures, or unrelated work in a release commit. Document the source SHA and deployment verification in the current handoff.

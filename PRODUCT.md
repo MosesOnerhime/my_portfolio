@@ -42,7 +42,8 @@ Visitors commonly arrive from a shared portfolio link, a project link, search, o
 - Project records and verified links in `app/data/projects.ts` and `app/data/site.ts`.
 - Crawlable case studies in `app/work/[slug]`.
 - A 20-second vertical Wizeup product promo source at `D:/repos/HyperFrames/Wizeup 3/renders/wizeup-promo.mp4`, supported by its project brief, frame direction, storyboard, and rendered snapshots.
-- A 30-second landscape showcase of Approovia Workspace Manager at `D:/repos/Motion Graphics/Approovia/videos/deliverables/approovia-workspace-landscape-with-music.mp4`, supported by its production report and video brief. The supplied version includes music and sound effects.
+- HADI Place / BTI at `D:/repos/BTI`, supported by its implemented website/publishing studio, project records, and verified public demonstrations at `https://hadispa.vercel.app/` and `/bti`. The portfolio shows public-page screenshots, not private admin records, and distinguishes the live demo from final client handover.
+- The current 90.6-second narrated landscape film of Approovia Workspace Manager at `D:/repos/Motion Graphics/Approovia/videos/deliverables/v3-narrated/approovia-workspace-v3-landscape.mp4`, supported by its production report, exact voice word timing, and film placement data. It includes voiceover, music, and sound effects; the web version has English captions. The earlier 30-second film is superseded in the portfolio UI.
 - Additional motion pieces have not been supplied yet and must remain clearly labelled future slots.
 
 ## Product Principles
