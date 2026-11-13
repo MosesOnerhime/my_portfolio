@@ -51,4 +51,10 @@ The following numeric claims are published in the Rally case study or card. The 
 
 ## Delivery state
 
-User requested a GitHub push and live verification on 2026-11-13. Record the commit, push, and Vercel deployment result here before handoff.
+User requested a GitHub push and live verification on 2026-11-13.
+
+- Commit `d56cfa9ba644de02e2c7d94ddb525cca8ff091fb` (`feat: publish Volleyball Rally results`) was pushed to `origin/main`; `git ls-remote` returned the same SHA.
+- Vercel deployment `dpl_DcV3hRxjimtKn2xYBH44QAYK7V6B` for the existing `my-portfolio` project is `READY` with target `production`. Vercel deployment metadata reports GitHub repo `MosesOnerhime/my_portfolio`, ref `main`, and commit SHA `d56cfa9ba644de02e2c7d94ddb525cca8ff091fb`.
+- The deployment has aliases `www.mosesonerhime.com` and `mosesonerhime.com`.
+- Unauthenticated live requests returned HTTP 200 for `/work/collections/games`, `/work/volleyball-rally`, and `/work/beyond-90`. The response HTML contains the organic-growth/no-ads copy and Rally results on the first two pages, plus the in-development and 500+ animations copy on Beyond 90.
+- Local source and QA changes outside the five committed paths remain untouched and unstaged.
