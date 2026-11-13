@@ -23,6 +23,7 @@ export function ProjectShowcase({ items = projects }: { items?: Project[] }) {
               </div>
               <h3>{project.title}</h3>
               <p>{project.summary}</p>
+              {project.cardNote && <p className="project-card-note">{project.cardNote}</p>}
               <div className="tag-list" aria-label={`${project.title} technologies and disciplines`}>
                 {project.tags.slice(0, 4).map((tag) => <span key={tag}>{tag}</span>)}
               </div>

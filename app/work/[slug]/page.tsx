@@ -105,6 +105,25 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </div>
           </header>
 
+          {project.results && (
+            <section className="case-results section-pad" aria-labelledby="results-title">
+              <div className="case-results-heading">
+                <p className="eyebrow">Results</p>
+                <h2 id="results-title">{project.results.asOf}</h2>
+              </div>
+              <dl className="case-results-strip">
+                {project.results.highlights.map((item) => <div key={item.label}><dt>{item.value}</dt><dd>{item.label}</dd></div>)}
+              </dl>
+            </section>
+          )}
+
+          {project.slug === 'volleyball-rally' && (
+            <section className="gameplay-video-slot section-pad" aria-labelledby="gameplay-video-title">
+              <div><p className="eyebrow">Gameplay</p><h2 id="gameplay-video-title">A closer look at a rally</h2><p>30-second gameplay video coming soon.</p></div>
+              <div className="gameplay-video-placeholder" aria-hidden="true"><span>Gameplay video</span></div>
+            </section>
+          )}
+
           <div className="case-media-wrap section-pad" data-entrance="case-media">
             <div className={`case-media visual-${project.visual}`}>
               <ProjectArtwork project={project} priority sizes="(max-width: 760px) 100vw, (max-width: 1600px) 90vw, 1500px" />
@@ -164,6 +183,17 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   <p className="case-body-copy">{project.approach}</p>
                 </section>
               ) : null}
+
+              {project.results && (
+                <section aria-labelledby="results-details-title">
+                  <p className="eyebrow">Roblox Creator Hub / Roblox Analytics</p>
+                  <h2 id="results-details-title">Player results</h2>
+                  <p className="case-body-copy">{project.results.asOf}</p>
+                  <dl className="case-results-details">
+                    {project.results.details.map((item) => <div key={item.heading}><dt>{item.heading}</dt><dd>{item.body}</dd></div>)}
+                  </dl>
+                </section>
+              )}
 
               <section aria-labelledby="contribution-title">
                 <p className="eyebrow">My contribution</p>

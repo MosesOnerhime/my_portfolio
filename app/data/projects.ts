@@ -50,6 +50,12 @@ export interface Project {
   linkGroups?: ProjectLinkGroup[];
   visual: 'drixil' | 'glamour' | 'bti' | 'calvision' | 'beyond' | 'volleyball' | 'forge' | 'learning' | 'trading' | 'dental' | 'editing';
   featured?: boolean;
+  cardNote?: string;
+  results?: {
+    asOf: string;
+    highlights: { value: string; label: string }[];
+    details: { heading: string; body: string }[];
+  };
 }
 
 const drixilInteractiveLinks: ProjectLink[] = [
@@ -126,8 +132,8 @@ export const projects: Project[] = [
     slug: 'beyond-90',
     title: 'Beyond 90',
     label: 'Game and original IP',
-    summary: 'A Roblox football game in development, built around broadcast-style presentation and fluid, responsive play.',
-    description: 'Beyond 90 is a competitive Roblox football game where each player controls one footballer for the match. I am building the gameplay systems, broadcast presentation, interface, progression, and wider creative direction under Drixil Interactive.',
+    summary: 'A Roblox football game in development, recreating the feel of EA FC with broadcast-style cameras, natural locomotion and fluid ball control.',
+    description: 'Beyond 90 is recreating the feel of EA FC on Roblox: broadcast-style cameras, a library of 500+ animations, natural locomotion and fluid ball control. One player, one footballer.',
     challenge: 'The game needs to feel like football rather than a generic Roblox ball game, while still working clearly on phone, keyboard and mouse, and gamepad. It also has to keep each player connected to one position and make team play readable through a broadcast camera.',
     approach: 'I split the experience across Lobby, Match, and Training places, with a shared build and a server-authoritative rules layer. The current systems cover passing, shooting, reception, defending, goalkeeping, set pieces, AI footballers, replays, progression, customization, and touch-first interface patterns.',
     role: 'Game developer and creative director',
@@ -164,17 +170,17 @@ export const projects: Project[] = [
     slug: 'volleyball-rally',
     title: 'Volleyball Rally',
     label: 'Roblox sports game',
-    summary: 'A fast 3v3 volleyball game built around simple controls, expressive rallies, and cross-device play.',
-    description: 'Volleyball Rally is an arcade indoor volleyball game from Drixil Interactive. I built its gameplay, presentation, interface, and multi-place structure around one clear idea: the game should be difficult because volleyball is difficult, not because the controls are confusing.',
+    summary: 'Authentic Roblox volleyball in 2v2, 3v3 and 6v6, for players who want real volleyball rather than arcade-heavy, superpower-style play.',
+    description: 'Volleyball Rally is an authentic Roblox volleyball game from Drixil Interactive, built for 2v2, 3v3 and 6v6. It is aimed at players who want real volleyball rather than arcade-heavy, superpower-style play. Rotations, positions, setting lanes, quick attacks and blocks all matter. Smart bots coordinate, adapt when read, fill empty places and step aside when people join.',
     challenge: 'Volleyball has several techniques and timing decisions that can become overwhelming on a phone or controller. The challenge was to keep serving, passing, setting, spiking, blocking, and diving readable without flattening the skill and positioning that make a rally satisfying.',
-    approach: 'I organized play around three intents: Control, Attack, and Hustle. Context turns those inputs into the right technique, while the camera handles aim. The server owns the match simulation and rules, AI athletes fill empty roster slots, and the same experience supports touch, keyboard and mouse, and gamepad.',
+    approach: 'The original controls use three intents: Control, Attack and Hustle. Position, aim and timing decide the touch, so one button can become a pass, set, spike, tip or dig depending on the moment. The game is phone-first, with swipe controls, gamepad and keyboard support. The server is authoritative, with prediction on the player’s device to help on slow connections. Other systems include Squad Control, where players control a whole team in an EA FC / 2K style, play styles, player cards, ranked play, replays, a TV-style spectator broadcast view and a voiced guided tutorial. I develop AI-first with Claude Code and Codex, using several agents in parallel. I use Blender, After Effects, Thrixel, Higgsfield and ElevenLabs for 3D, art and audio.',
     role: 'Game developer, designer, and creative director',
     year: '2026',
     status: 'in-development',
     statusLabel: 'Playable build',
     statusNote: 'Volleyball Rally has a public Roblox game page and a playable build. Development is continuing across gameplay, environments, progression, presentation, and cross-device testing.',
     category: 'creative',
-    tags: ['Luau', 'Roblox', '3v3 gameplay', 'Server authority', 'Touch controls'],
+    tags: ['Luau', 'Roblox Studio', 'VS Code', 'GitHub', 'Claude Code', 'Codex', 'Blender', 'After Effects', 'Thrixel', 'Higgsfield', 'ElevenLabs', '2v2, 3v3 and 6v6'],
     highlights: [
       'Built a three-intent control system for passing, setting, spiking, blocking, serving, and diving',
       'Created server-authoritative match, ball-contact, scoring, matchmaking, and progression systems',
@@ -214,6 +220,26 @@ export const projects: Project[] = [
     linkGroups: [{ label: 'Drixil Interactive', links: drixilInteractiveLinks }],
     visual: 'volleyball',
     featured: true,
+    cardNote: '11,102 daily players on its best day, all from organic growth with no ads.',
+    results: {
+      asOf: 'As of 12 November 2026',
+      highlights: [
+        { value: '11,102', label: 'daily players on the best day (11 Nov 2026)' },
+        { value: 'about 20x', label: 'the first month’s average in its first five weeks' },
+        { value: '144K+', label: 'visits (12 Nov 2026)' },
+        { value: 'Organic growth', label: 'no ads at all' },
+      ],
+      details: [
+        { heading: 'Development and testing', body: 'Development started 7 Sep 2026. Public testing opened 9 Oct 2026.' },
+        { heading: 'Daily players', body: 'The game averaged 537 daily players over its first month (9 Oct to 3 Nov), then 5,257 a day over 4 to 10 Nov (about 10x), and reached 11,102 on 11 Nov (about 20x the first month’s average).' },
+        { heading: 'Concurrent players and visits', body: 'Peak concurrent players: 169 (11 Nov 2026). Visits: 144,000+ (12 Nov 2026).' },
+        { heading: 'Roblox benchmark', body: 'Above Roblox’s top-10,000 benchmark for daily players since 8 Nov 2026. On 10 Nov: 7,869 against the benchmark’s 4,482. This is a benchmark comparison, not a ranking.' },
+        { heading: 'Retention', body: 'Day-1 retention about 10.5% (4 to 10 Nov), above the median for Roblox’s Sports & Racing genre (genre benchmark, 50th to 90th percentile: 7.2% to 13.6%). Day-7 retention 3.18% on 3 Nov, above the Sports & Racing genre’s 90th percentile (2.93%).' },
+        { heading: 'Devices and updates', body: '54% of players are on phones (4 to 10 Nov); also played on computers, tablets and consoles. 13 public updates in about two months.' },
+        { heading: 'Biggest player countries', body: 'United States, Brazil, Philippines (9 Oct to 2 Nov).' },
+        { heading: 'Why I held off on ads', body: 'Growth so far has been entirely organic, with no ads. “I want the game as close to perfect as I can get it before I put money behind a bigger audience, so the players I pay for stay.”' },
+      ],
+    },
   },
   {
     slug: 'forge',
